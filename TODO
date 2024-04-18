@@ -1,0 +1,6 @@
+Dodaj folder dla plikow typu Logs.hpp; Errors.hpp; Memory.hpp; Memory.cpp; Timer.hpp; Timer.cpp;
+Zintegrowanie prostego systemu testow;
+Poprawa pliku CMake;
+Folder do przechowywania kontenerow;
+.Builds i .Binaries powinny dzialac troche inaczej;
+Pliki *.bat do tworzenia *.exe...;
