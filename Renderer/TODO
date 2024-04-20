@@ -1,0 +1,149 @@
+struct Cube : public EntityFragment<Cube>
+{
+	public:
+	// some data
+
+};
+struct Sphere : public EntityFragment<Sphere>
+{
+	public:
+	// some data
+
+};
+
+struct Mesh : public EntityFragment<VMesh>
+{
+	public:
+	// some data
+
+};
+struct VMesh : public EntityFragment<VMesh>
+{
+	public:
+	// some data
+
+};
+
+
+
+struct DrawData : public EntityFragment<DrawData>
+{
+	public:
+	// some data
+
+};
+
+
+
+class DrawController
+{
+	public:
+	static void OnFrame(EntityEngine& ee, float dt)
+	{
+		for (EntityView view = ee.View<CFrame, Cube, DrawData>(); view.Verify(); ++view) {
+			Entity entity = view.Record();
+			CFrame& cframe = view.Fragment<CFrame>();
+			Cube& cube = view.Fragment<Cube>();
+			DrawData& draw_data = view.Fragment<DrawData>();
+
+			Renderer::Draw(cframe, cube, draw_data);
+			// what does that do ...
+			// ... that will basically call GeometryShader for that Mesh ...
+			// ... this will modify GBuffer
+			// 
+
+		}
+		for (EntityView view = ee.View<CFrame, Sphere, DrawData>(); view.Verify(); ++view) {
+			Entity entity = view.Record();
+			CFrame& cframe = view.Fragment<CFrame>();
+			Sphere& sphere = view.Fragment<Sphere>();
+			DrawData& draw_data = view.Fragment<DrawData>();
+
+			Renderer::Draw(cframe, sphere, draw_data);
+
+		}
+		for (EntityView view = ee.View<CFrame, Mesh, DrawData>(); view.Verify(); ++view) {
+			Entity entity = view.Record();
+			CFrame& cframe = view.Fragment<CFrame>();
+			Mesh& mesh = view.Fragment<Mesh>();
+			DrawData& draw_data = view.Fragment<DrawData>();
+
+			Renderer::Draw(cframe, mesh, draw_data);
+
+		}
+		for (EntityView view = ee.View<CFrame, VMesh, DrawData>(); view.Verify(); ++view) {
+			Entity entity = view.Record();
+			CFrame& cframe = view.Fragment<CFrame>();
+			VMesh& vmesh = view.Fragment<VMesh>();
+			DrawData& draw_data = view.Fragment<DrawData>();
+			
+			Renderer::Draw(cframe, vmesh, draw_data);
+
+		}
+
+	}
+
+};
+
+struct Light
+{
+	public:
+	glm::vec3 Location;
+	Color LightColor;
+	float Radius;
+	// other data ...
+	// ... could be better
+
+};
+struct LigthBuffer // : Frag<LightBuffer>
+{
+	public:
+	Buffer<Light, 64> Lights;
+	size_t Length;
+	// ... that should reduce GL calls
+
+};
+class LightController
+{
+	public:
+	static void OnFrame(EntityEngine& ee, float dt)
+	{
+		for (EntityView view = ee.View<LightBuffer>(); view.Verify(); ++view) {
+			Entity entity = view.Record();
+			LightBuffer& light_buffer = view.Fragment<LightBuffer>();
+			
+			Renderer::Draw(cframe, light_buffer, draw_data);
+
+		}
+
+	}
+
+};
+
+class PostProcessors
+{
+	public:
+	// BitField to control options;
+	static void OnFrame(EntityEngine& ee, float dt)
+	{
+		Renderer::Occlusion();
+		Renderer::AmbientOcclusion();
+		Renderer::EfektStarejGazety(); // if (efekt_starej_gazety_is_true) Renderer::EfektStarejGazety();
+		Renderer::ColorCorrection();
+		// Many others;
+
+
+	}
+
+};
+
+// Gameplay Specific systems/controllers ...
+// ...
+EntityEngine::Register<DrawController>();
+EntityEngine::Register<LightController>();
+EntityEngine::Register<PostProcessors>();
+// TODO: Maybe better names than Mesh and VMesh ...
+// IDEA: MeshDrawable; Drawable; VDrawable;
+
+// IDEA: for Physics and Collisions;
+// IDEA: CubeCollider; SphereCollider; MeshCollier; VMeshCollider; ...
