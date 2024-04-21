@@ -1,6 +1,4 @@
-#ifndef SHADER_H
-#define SHADER_H
-
+#pragma once
 #include "./utils/shader_utils.hpp"
 class Shader
 {
@@ -11,5 +9,3 @@ class Shader
     bool FragmentShader();
     static bool Bind();
 };
-
-#endif

@@ -1,4 +1,4 @@
-#include "Renderer/OpenGL/Shader.hpp"
+#include "./Shader.hpp"
 
 bool Shader::VertexShader()
 {
