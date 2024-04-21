@@ -47,6 +47,9 @@ class DrawController
 			DrawData& draw_data = view.Fragment<DrawData>();
 
 			Renderer::Draw(cframe, cube, draw_data);
+			
+			Time::FrameDeltaTime;
+			Time::PeriodicDeltaTime;
 			// what does that do ...
 			// ... that will basically call GeometryShader for that Mesh ...
 			// ... this will modify GBuffer
