@@ -1,7 +1,7 @@
 #include "./shader_utils.hpp"
 #include <cstdint>
 
-std::string LoadShaderSource(std::string filepath)
+std::string LoadShaderSource(const char* filepath)
 {
     std::ifstream shaderSource(filepath, std::ios::ate | std::ios::in);
     const size_t length = shaderSource.tellg();
@@ -12,12 +12,12 @@ std::string LoadShaderSource(std::string filepath)
     return shader;
 }
 
-uint32_t CompileShader(const char* source, GLenum stage, const std::string& message)
+uint32_t CompileShader(const char* source, GLenum stage, const char* message)
 {
     uint32_t shader = glCreateShaderProgramv(stage, 1, &source);
     std::string log;
     log.resize(1024);
     glGetProgramInfoLog(shader, log.size(), nullptr, &log.front());
-    printf("%s: %s\n", message.c_str(), log.c_str());
+    printf("%s: %s\n", message, log.c_str());
     return shader;
 }

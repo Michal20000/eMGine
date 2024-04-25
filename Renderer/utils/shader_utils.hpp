@@ -5,5 +5,5 @@
 #include<fstream>
 #include<iostream>
 
-std::string LoadShaderSource(std::string);
+std::string LoadShaderSource(const char* filepath);
 uint32_t CompileShader(const char* source, GLenum stage, const std::string& message);
