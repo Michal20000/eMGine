@@ -14,6 +14,12 @@
 #define STRINGIFY_BUFFER(X) #X
 #define STRINGIFY(X) STRINGIFY_BUFFER(X)
 
+#ifdef DEBUG
+#define GL(Function) Function; GLenum error = glGetError(); if (error != GL_NO_ERROR) LOG_FL_ERROR("GL Error " << error);
+#else
+#define GL(Function) Function
+#endif
+
 // Deklaracja wskaznikow i typow;
 
 
