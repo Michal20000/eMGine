@@ -1,7 +1,11 @@
 #pragma once
 #include <cstdint>
 
-// tutaj dodawaj Bilioteki typu Vector.hpp
+// #include "Buffer.hpp"
+// #include "Vector.hpp"
+// #include "BitField.hpp"
+#include "Logs.hpp"
+#include "Errors.hpp"
 
 
 
