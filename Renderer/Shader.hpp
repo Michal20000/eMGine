@@ -1,6 +1,6 @@
 #pragma once
 #include "/Dependencies/GL3W/include/gl3w.h"
-#include "./utils/shader_utils.hpp"
+// #include "./utils/shader_utils.hpp"
 #include <cstdint>
 class Shader
 {

@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 cmake_minimum_required(VERSION 3.10)
-project(Hello)
+project(eMGine)
 
 # set(CMAKE_C_FLAGS "")
 # set(CMAKE_C_FLAGS_DEBUG "-DDEBUG -g")
@@ -41,21 +41,44 @@ project(Hello)
 #	runtime_0 runtime_1 runtime_2...
 # test_0 test_1 test_2...
 
-set(ALL_FLAGS, "-DALL=1")
+set(ALL_FLAGS "-DALL=1")
 set(DEBUG_FLAGS "-DDEBUG=1 -O0 -g")
 set(RELEASE_FLAGS "-DRELEASE=1 -O3")
 
-add_executable(Hello_DEBUG Main.cpp Memory.cpp BitField.hpp Timer.cpp EntityEngine/EntityContainer.cpp EntityEngine/EntityEngine.cpp EntityEngine/EntityTable.cpp EntityEngine/EntityView.cpp)
-set_target_properties(Hello_DEBUG PROPERTIES RUNTIME_OUTPUT_DIRECTORY "../Binaries/Hello/Debug")
-target_compile_options(Hello_DEBUG PUBLIC ${ALL_FLAGS} ${DEBUG_FLAGS})
-target_include_directories(Hello_DEBUG PRIVATE ".")
-target_include_directories(Hello_DEBUG PRIVATE "./EntityEngine")
-# TODO: flags for compiler
+file(GLOB CPP_FILES "./*.cpp")
+file(GLOB CONTAINERS_CPP_FILES "./*.cpp")
+file(GLOB EE_CPP_FILES "./*.cpp")
+file(GLOB RENDERER_CPP_FILES "./*.cpp")
+set(ALL_CPP_FILES ${CPP_FILES} ${CONTAINERS_CPP_FILES} ${EE_CPP_FILES} ${RENDERER_CPP_FILES} "./Dependencies/GL3W/gl3w.cpp")
 
-# EntityEngine/EntityContainer.cpp
-add_executable(Hello_RELEASE Main.cpp Memory.cpp BitField.hpp Timer.cpp EntityEngine/EntityContainer.cpp EntityEngine/EntityEngine.cpp EntityEngine/EntityTable.cpp EntityEngine/EntityView.cpp)
-set_target_properties(Hello_RELEASE PROPERTIES RUNTIME_OUTPUT_DIRECTORY "../Binaries/Hello/Release")
-target_compile_options(Hello_RELEASE PUBLIC ${ALL_FLAGS} ${RELEASE_FLAGS})
-target_include_directories(Hello_RELEASE PRIVATE ".")
-target_include_directories(Hello_RELEASE PRIVATE "./EntityEngine")
-# TODO: flags for compiler
+
+
+add_executable(application_debug ${ALL_CPP_FILES})
+set_target_properties(application_debug PROPERTIES RUNTIME_OUTPUT_DIRECTORY "../Binaries/Debug")
+target_compile_options(application_debug PUBLIC ${ALL_FLAGS} ${DEBUG_FLAGS})
+
+target_include_directories(application_debug PRIVATE ".")
+target_include_directories(application_debug PRIVATE "./Containers")
+target_include_directories(application_debug PRIVATE "./EntityEngine")
+target_include_directories(application_debug PRIVATE "./Renderer")
+
+target_include_directories(application_debug PRIVATE "./Dependencies/GLFW/include")
+target_include_directories(application_debug PRIVATE "./Dependencies/GL3W/include")
+target_link_directories(application_debug PRIVATE "./Dependencies/GLFW")
+target_link_libraries(application_debug PRIVATE "glfw3")
+
+
+
+add_executable(application_release ${ALL_CPP_FILES})
+set_target_properties(application_release PROPERTIES RUNTIME_OUTPUT_DIRECTORY "../Binaries/Release")
+target_compile_options(application_release PUBLIC ${ALL_FLAGS} ${RELEASE_FLAGS})
+
+target_include_directories(application_release PRIVATE ".")
+target_include_directories(application_release PRIVATE "./Containers")
+target_include_directories(application_release PRIVATE "./EntityEngine")
+target_include_directories(application_release PRIVATE "./Renderer")
+
+target_include_directories(application_release PRIVATE "./Dependencies/GLFW/include")
+target_include_directories(application_release PRIVATE "./Dependencies/GL3W/include")
+target_link_directories(application_release PRIVATE "./Dependencies/GLFW")
+target_link_libraries(application_release PRIVATE "glfw3")

@@ -15,13 +15,21 @@
 #define STRINGIFY(X) STRINGIFY_BUFFER(X)
 
 #ifdef DEBUG
-#define GL(Function) Function; GLenum error = glGetError(); if (error != GL_NO_ERROR) LOG_FL_ERROR("GL Error " << error);
+#define GL(Function) Function; do { uint32_t error = glGetError(); if (error != 0) LOG_FL_ERROR("GL Error " << error); } while (false)
 #else
 #define GL(Function) Function
 #endif
 
-// Deklaracja wskaznikow i typow;
+#ifdef DEBUG
+#define GLFW(Function) Function; do { const char* description; int32_t error = glfwGetError(&description); if (error != 0) LOG_FL_ERROR("GLFW Error " << error << " " << description); } while (false)
+#else
+#define GLFW(Function) Function
+#endif
 
+// Deklaracja wskaznikow i typow;
+class GLFWwindow;
+class GLFWmonitor;
+class GLFWcursor;
 
 
 // Struktury prymitywne;
