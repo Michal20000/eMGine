@@ -26,7 +26,6 @@ Window::~Window()
 	GLFW(glfwDestroyWindow(m_Window));
 	GLFW(glfwTerminate());
 	LOG_WARN("Window is Destroyed");
-
 }
 
 

@@ -58,5 +58,7 @@
 		"cinttypes": "cpp",
 		"typeinfo": "cpp",
 		"variant": "cpp"
-	}
+	},
+	"C_Cpp.default.intelliSenseMode": "windows-clang-x64",
+	"clangd.enableCodeCompletion": false
 }

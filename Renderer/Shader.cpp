@@ -1,30 +1,54 @@
-#include "./Shader.hpp"
+#include "Shader.hpp"
 #include <cstdint>
 
-inline void Shader::SetVertexShaderPath(const char* filepath)
+Shader::Shader(const char* vert_filepath, const char* frag_filepath) :
+	m_VertexShaderPath(vert_filepath),
+	m_FragmentShaderPath(frag_filepath)
+{}
+
+Shader::~Shader()
 {
-    m_vertexShaderPath = filepath;
+
 }
 
-inline void Shader::SetFragmentShaderPath(const char* filepath)
+void Shader::CompileVertexShader()
 {
-    m_fragmentShaderPath = filepath;;
+	std::string source = m_LoadShaderSource(m_VertexShaderPath);
+	m_VertexShader = m_CompileShader(source.c_str(), GL_VERTEX_SHADER, "VS log: ");
 }
 
-void Shader::SetVertexShader()
+void Shader::CompileFragmentShader()
 {
-    std::string source = LoadShaderSource(m_vertexShaderPath);
-    m_vertexShader = CompileShader(source, GL_VERTEX_SHADER, "VS log: ");
-}
-
-void Shader::SetFragmentShader()
-{
-    std::string source = LoadShaderSource(m_fragmentShaderPath);
-    m_fragmentShader = CompileShader(source, GL_FRAGMENT_SHADER, "FS log: ");
+	std::string source = m_LoadShaderSource(m_FragmentShaderPath);
+	m_FragmentShader = m_CompileShader(source.c_str(), GL_FRAGMENT_SHADER, "FS log: ");
 }
 
 void Shader::Bind(uint32_t pipeline)
 {
-    glUseProgramStages(pipeline, GL_VERTEX_SHADER_BIT, v_shader);
-	glUseProgramStages(pipeline, GL_FRAGMENT_SHADER_BIT, f_shader);
+	GL(glUseProgramStages(pipeline, GL_VERTEX_SHADER_BIT, m_VertexShader));
+	GL(glUseProgramStages(pipeline, GL_FRAGMENT_SHADER_BIT, m_FragmentShader));
+}
+
+std::string Shader::m_LoadShaderSource(const char* filepath)
+{
+	std::ifstream shader_source(filepath, std::ios::ate | std::ios::in);
+	const size_t length = shader_source.tellg();
+	shader_source.seekg(0);
+	std::string shader_str;
+	shader_str.resize(length);
+	shader_source.read(&shader_str.front(), length);
+	return shader_str;
+}
+
+uint32_t Shader::m_CompileShader(const char* source, GLenum stage, const char* message)
+{
+	uint32_t shader = GL(glCreateShaderProgramv(stage, 1, &source));
+	std::string log;
+	log.resize(1024);
+	GL(glGetProgramInfoLog(shader, log.size(), nullptr, &log.front()));
+	char* log_c;
+	strcpy(log_c, log.c_str());
+	strcat(log_c, message);
+	LOG_WARN(log_c);
+	return shader;
 }

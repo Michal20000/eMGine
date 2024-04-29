@@ -1,21 +1,31 @@
 #pragma once
-#include "/Dependencies/GL3W/include/gl3w.h"
-// #include "./utils/shader_utils.hpp"
+#include "Dependencies/GL3W/include/gl3w.h"
+#include "RendererUtilities.hpp"
+#include<string>
+#include<fstream>
+#include<iostream>
 #include <cstdint>
+
 class Shader
 {
-private:
-    const char* m_vertexShaderPath;
-    const char* m_fragmentShaderPath;
-    uint32_t m_vertexShader;
-    uint32_t m_fragmentShader;
-public:
-    Shader();
-    ~Shader();
-    friend class Renderer;
-    inline void SetVertexShaderPath(const char* filepath);
-    inline void SetFragmentShaderPath(const char* filepath);
-    void SetVertexShader();
-    void SetFragmentShader();
-    void Bind(uint32_t pipeline);
+	public:
+	Shader(const char* vert_filepath, const char* frag_filepath);
+	Shader(const Shader& ob) = delete;
+	Shader(Shader&& ob) = delete;
+	~Shader();
+	friend class Renderer;
+
+	void SetVertexShaderPath(const char* filepath);
+	void SetFragmentShaderPath(const char* filepath);
+	void CompileVertexShader();
+	void CompileFragmentShader();
+	void Bind(uint32_t pipeline);
+
+	private:
+	const char* m_VertexShaderPath;
+	const char* m_FragmentShaderPath;
+	uint32_t m_VertexShader;
+	uint32_t m_FragmentShader;
+	std::string m_LoadShaderSource(const char* filepath);
+	uint32_t m_CompileShader(const char* source, GLenum stage, const char* message);
 };

@@ -40,7 +40,7 @@ class Vector3F
 	float X, Y, Z;
 	private:
 
-}
+};
 class Vector
 {
 	public:
