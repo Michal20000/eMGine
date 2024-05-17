@@ -5,6 +5,7 @@
 // #include "Buffer.hpp"
 // #include "Vector.hpp"
 // #include "BitField.hpp"
+#include "EntityEngine/EntityEngine.hpp"
 #include "Logs.hpp"
 #include "Errors.hpp"
 
@@ -40,6 +41,7 @@ struct Vertex
     glm::vec3 normal;
     glm::vec3 color;
     //glm::vec2 uv;
+    
 };
 
 struct Mesh
@@ -50,5 +52,4 @@ struct Mesh
     //texture;
     size_t indexCount;
 
-    
 };
