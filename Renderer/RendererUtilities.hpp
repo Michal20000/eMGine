@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
 
+#include "Dependencies/glm/glm.hpp"
 // #include "Buffer.hpp"
 // #include "Vector.hpp"
 // #include "BitField.hpp"
@@ -33,3 +34,21 @@ class GLFWcursor;
 
 
 // Struktury prymitywne;
+struct Vertex
+{
+    glm::vec3 position;
+    glm::vec3 normal;
+    glm::vec3 color;
+    //glm::vec2 uv;
+};
+
+struct Mesh
+{
+    uint32_t vertexArray;
+    uint32_t vertexBuffer;
+    uint32_t indexBuffer;
+    //texture;
+    size_t indexCount;
+
+    
+};
