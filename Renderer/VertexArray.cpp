@@ -6,6 +6,7 @@
 VertexArray::VertexArray()
 {
     glCreateVertexArrays(1, &m_id);
+	
 }
 
 void VertexArray::AddAttribute(int32_t size, GLenum type, size_t relative_offset, bool normalized)
@@ -17,4 +18,5 @@ void VertexArray::AddAttribute(int32_t size, GLenum type, size_t relative_offset
     glVertexArrayVertexBuffer(m_id, attribute_location, m_vertexBuffer, relative_offset, sizeof(Vertex)); //TODO
     glVertexArrayAttribBinding(m_id, attribute_location, m_vertexBuffer);
     s_attributesCount++;
+
 }

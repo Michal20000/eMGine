@@ -1,6 +1,7 @@
 #pragma once
 #include "Dependencies/GL3W/include/gl3w.h"
 #include "./RendererUtilities.hpp"
+#include "./MeshData.hpp"
 #include "EntityEngine/EntityEngine.hpp"
 
 namespace BasicShapes
@@ -44,7 +45,7 @@ namespace BasicShapes
 			};
 
 			Entity entity = ee.CreateEntity();
-			ee.Attach<Mesh>(entity);
+			ee.Attach<MeshData>(entity);
 			;
 			;
 		}

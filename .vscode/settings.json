@@ -57,7 +57,9 @@
 		"streambuf": "cpp",
 		"cinttypes": "cpp",
 		"typeinfo": "cpp",
-		"variant": "cpp"
+		"variant": "cpp",
+		"xloctime": "cpp",
+		"xstddef": "cpp"
 	},
 	"C_Cpp.default.intelliSenseMode": "windows-clang-x64",
 	"clangd.enableCodeCompletion": false

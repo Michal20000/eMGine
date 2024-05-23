@@ -1,9 +1,9 @@
 #pragma once
 #include "Dependencies/GL3W/include/gl3w.h"
 #include "RendererUtilities.hpp"
-#include<string>
-#include<fstream>
-#include<iostream>
+#include <string>
+#include <fstream>
+#include <iostream>
 #include <cstdint>
 
 class Shader
@@ -28,4 +28,5 @@ class Shader
 	uint32_t m_FragmentShader;
 	std::string m_LoadShaderSource(const char* filepath);
 	uint32_t m_CompileShader(const char* source, GLenum stage, const char* message);
+
 };
