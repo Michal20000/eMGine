@@ -11,7 +11,7 @@ class Renderer
 	~Renderer();
 	void Pipeline();
 	void SetShader(Shader& shader);
-	void OnFrame();
+	void OnFrame(EntityEngine& ee, float delta_time);
 	//void DrawTerrain();
 
 	private:

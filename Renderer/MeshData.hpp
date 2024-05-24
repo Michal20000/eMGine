@@ -7,6 +7,6 @@ class MeshData : EntityFragment<MeshData>
 	;
 
 	private:
-	;
+	Mesh* m_mesh;
 
 };
