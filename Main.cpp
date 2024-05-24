@@ -24,55 +24,55 @@
 // typy obiektowe oraz referencyjne;
 // typy referencyjne;
 
-struct Vector;
-struct obVector;
-struct refVector;
-void Create_Vector(Buffer* const ob); // Create;
-void Destroy_Vector(Buffer* const ob); // Destroy;
-void Allocate_Vector(Buffer** const ob); // Allocate + Create;
-void Deallocate_Vector(Buffer** const ob); // Deallocate + Destroy;
+// struct Vector;
+// struct obVector;
+// struct refVector;
+// void Create_Vector(Buffer* const ob); // Create;
+// void Destroy_Vector(Buffer* const ob); // Destroy;
+// void Allocate_Vector(Buffer** const ob); // Allocate + Create;
+// void Deallocate_Vector(Buffer** const ob); // Deallocate + Destroy;
 
-#define VECTOR(Function) Function
-#define ALLOCA(Function) Function
-class Vector3F
-{
-	public:
-	float X, Y, Z;
-	private:
+// #define VECTOR(Function) Function
+// #define ALLOCA(Function) Function
+// class Vector3F
+// {
+// 	public:
+// 	float X, Y, Z;
+// 	private:
 
-};
-class Vector
-{
-	public:
-	DEFAULT_5_RULE();
-	void Create()
-	{
-		this->m_X = 0;
-		this->m_Y = 0;
-		this->m_Z = 0;
+// };
+// class Vector
+// {
+// 	public:
+// 	DEFAULT_5_RULE();
+// 	void Create()
+// 	{
+// 		this->m_X = 0;
+// 		this->m_Y = 0;
+// 		this->m_Z = 0;
 
-	}
-	void Destroy()
-	{
+// 	}
+// 	void Destroy()
+// 	{
 		
-	}
-	void Allocate(Vector** ob)
-	{
-		Main::Allocate(ob);
-		ob->Create();
+// 	}
+// 	void Allocate(Vector** ob)
+// 	{
+// 		Main::Allocate(ob);
+// 		ob->Create();
 
-	}
-	void Deallocate(Vector** ob)
-	{
-		ob->Destroy();
-		Main::Deallocate(ob);
+// 	}
+// 	void Deallocate(Vector** ob)
+// 	{
+// 		ob->Destroy();
+// 		Main::Deallocate(ob);
 
-	}
+// 	}
 
-	private:
-	uint32_t m_X, m_Y, m_Z;
+// 	private:
+// 	uint32_t m_X, m_Y, m_Z;
 
-};
+// };
 
 
 
@@ -83,45 +83,83 @@ int32_t main()
 	// IMPORTANT: Vector vs Vector3F
 	// IMPORTANT: Lstack vs Lheap
 	
-	Vector* vec;
-	VECTOR(AllocateCreate(&vec, 0.0F, 0.0F, 0.0F));
-	VECTOR(DestroyDeallocate(&vec));
+	// Vector* vec;
+	// VECTOR(AllocateCreate(&vec, 0.0F, 0.0F, 0.0F));
+	// VECTOR(DestroyDeallocate(&vec));
 
-	Vector& ref_to_vec = *vec;
-	ref_to_vec.Length(); ref_to_vec.BLength();
+	// Vector& ref_to_vec = *vec;
+	// ref_to_vec.Length(); ref_to_vec.BLength();
 
-	Vector vec_2;
-	vec_2.Create(ref_to_vec);
-	vec_2.Destroy();
+	// Vector vec_2;
+	// vec_2.Create(ref_to_vec);
+	// vec_2.Destroy();
 
-	Vector vec;
-	VECTOR(vec.Create(0.0F, 0.0F, 0.0F));
-	VECTOR(vec.Destroy());
+	// Vector vec;
+	// VECTOR(vec.Create(0.0F, 0.0F, 0.0F));
+	// VECTOR(vec.Destroy());
 
-	Vector3F vec;
-	vec.X = 0.0F;
-	vec.Y = 0.0F;
-	vec.Z = 0.0F;
+	// Vector3F vec;
+	// vec.X = 0.0F;
+	// vec.Y = 0.0F;
+	// vec.Z = 0.0F;
 
-	Vector3F* vec;
-	AllocateCreate(&vec);
-	Vector3F& ob = *vec;
-	ob.X = 0.0F; ob.Y = 0.0F; ob.Z = 0.0F;
-	DestroyDeallocate(&vec);
-
-
+	// Vector3F* vec;
+	// AllocateCreate(&vec);
+	// Vector3F& ob = *vec;
+	// ob.X = 0.0F; ob.Y = 0.0F; ob.Z = 0.0F;
+	// DestroyDeallocate(&vec);
 
 
 
-	// Vector_ob -> TODO: Destroy;
-	Vector strob;
-	VECTOR(Create_Vector(&strob));
-	VECTOR(Destroy_Vector(&strob));
 
-	// Vector_ref -> TODO: Deallocate;
-	Vector* clsob;
-	VECTOR(Allocate_Vector(&clsob));
-	VECTOR(Deallocate_Vector(&clsob));
+
+	// // Vector_ob -> TODO: Destroy;
+	// Vector strob;
+	// VECTOR(Create_Vector(&strob));
+	// VECTOR(Destroy_Vector(&strob));
+
+	// // Vector_ref -> TODO: Deallocate;
+	// Vector* clsob;
+	// VECTOR(Allocate_Vector(&clsob));
+	// VECTOR(Deallocate_Vector(&clsob));
+
+
+	// enum class KeyState
+	// {
+	// 	BEING_RELEASED = 0,
+	// 	PRESSED = 1,
+	// 	BEING_PRESSED = 2,
+	// 	RELEASED = 3
+
+	// };
+	// enum class KeyCode
+	// {
+	// 	A, B, C, D, E, F, G ...
+
+	// };
+
+	// Keyboard.hpp
+	// There are 4 states { UP; DOWN; UP_TO_DOWN; DOWN_TO_UP; };
+	// Button(KeyCode::LEFT_CONTROL, KeyState::PRESSED, 0.0F);
+	// TODO: { char State; float Duration; }
+
+	// Mouse.hpp
+	// There are 4 states { UP; DOWN; UP_TO_DOWN; DOWN_TO_UP; };
+	// TODO: { LMB; MMB; RMB; }
+	// TODO: { char State; float Duration; }
+	// TODO: what if you want to rotate camera?
+	// TODO: or check if UI element is clicked or things like that...
+
+	// IO.hpp
+	// Function ideas:
+	// press_time
+	// release_time
+	
+	// class ButtonData;
+	// ButtonData info = Button(KeyCode::LEFT_CONTROL);
+	// ButtonData info = Button("f", "pressed", 3.0F);
+	// LOG(info.Duration());
+	// LOG(info.State());
 
 	Window window = Window("eMGine", 1280, 720);
 	window.Main();

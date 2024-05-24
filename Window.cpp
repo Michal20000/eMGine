@@ -3,6 +3,21 @@
 
 
 
+void KeyFunction(GLFWwindow* window, int32_t key, int32_t code, int32_t action, int32_t mode)
+{
+	LOG("GLFW Key: " << key << " " << code << " " << action << " " << mode);
+	LOG("GLFW: " << glfwGetKey(window, GLFW_KEY_A));
+	LOG("");
+
+}
+void CharacterFunction(GLFWwindow* window, uint32_t character)
+{
+	LOG("GLFW Character: " << character);
+
+}
+
+
+
 Window::Window(const char* title, size_t width, size_t height) :
 	m_Width(width),
 	m_Height(height)
@@ -19,6 +34,8 @@ Window::Window(const char* title, size_t width, size_t height) :
 	LOG_WARN("Window is Created");
 
 	// TODO: Callbacks...
+	GLFW(glfwSetKeyCallback(m_Window, &KeyFunction));
+	GLFW(glfwSetCharCallback(m_Window, &CharacterFunction));
 
 }
 Window::~Window()
@@ -26,23 +43,26 @@ Window::~Window()
 	GLFW(glfwDestroyWindow(m_Window));
 	GLFW(glfwTerminate());
 	LOG_WARN("Window is Destroyed");
+
 }
 
 
 
 void Window::Main()
 {
-	// GLFW(glfwWindowShouldClose(m_Window));
+	// TODO: GLFW(glfwWindowShouldClose(m_Window));
 	while (!glfwWindowShouldClose(m_Window)) {
 		GLFW(glfwPollEvents());
 		GLFW(glfwSwapBuffers(m_Window));
 			
 	}
+
+
+
 	// Main Loop is basically
 	// 1. IO like Mouse or Keyboard;
 	// 2. Update;
 	// 3. Draw;
-
 
 }
 size_t Window::Width()
