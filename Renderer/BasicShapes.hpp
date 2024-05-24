@@ -11,6 +11,7 @@ namespace BasicShapes
 		public:
 		static void OnEvent(EntityEngine& ee, CreateCubeEvent& event)
 		{
+			//przepisz na pos vec3, normal vec3, color vec3
 			Vertex vertices[] //vec3 inPos, vec3 normal, vec3 color/uvw
 			{
 				{{-0.5f, -0.5f, -0.5f}, {0.f, 0.f, -1.f}, {0.f, 0.f, 0.f}},	//0-8 bottom
@@ -46,8 +47,6 @@ namespace BasicShapes
 
 			Entity entity = ee.CreateEntity();
 			ee.Attach<MeshData>(entity);
-			;
-			;
 		}
 	};
 }
