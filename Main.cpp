@@ -31,6 +31,13 @@
 // void Destroy_Vector(Buffer* const ob); // Destroy;
 // void Allocate_Vector(Buffer** const ob); // Allocate + Create;
 // void Deallocate_Vector(Buffer** const ob); // Deallocate + Destroy;
+// struct Vector;
+// struct obVector;
+// struct refVector;
+// void Create_Vector(Buffer* const ob); // Create;
+// void Destroy_Vector(Buffer* const ob); // Destroy;
+// void Allocate_Vector(Buffer** const ob); // Allocate + Create;
+// void Deallocate_Vector(Buffer** const ob); // Deallocate + Destroy;
 
 // #define VECTOR(Function) Function
 // #define ALLOCA(Function) Function

@@ -38,6 +38,7 @@ Window::Window(const char* title, size_t width, size_t height) :
 	GLFW(glfwSetCharCallback(m_Window, &CharacterFunction));
 
 }
+
 Window::~Window()
 {
 	GLFW(glfwDestroyWindow(m_Window));
@@ -46,13 +47,12 @@ Window::~Window()
 
 }
 
-
-
 void Window::Main()
 {
 	// TODO: GLFW(glfwWindowShouldClose(m_Window));
 	while (!glfwWindowShouldClose(m_Window)) {
 		GLFW(glfwPollEvents());
+		//render the cube
 		GLFW(glfwSwapBuffers(m_Window));
 			
 	}
@@ -65,20 +65,24 @@ void Window::Main()
 	// 3. Draw;
 
 }
+
 size_t Window::Width()
 {
 	return m_Width;
 
 }
+
 size_t Window::Height()
 {
 	return m_Height;
 
 }
+
 // void Window::Width(size_t width)
 // {
 
 // }
+
 // void Window::Height(size_t height)
 // {
 

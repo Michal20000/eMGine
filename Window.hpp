@@ -1,5 +1,6 @@
 #pragma once
 #include "RendererUtilities.hpp"
+#include <cstddef>
 
 // struct WindowSize
 // {
