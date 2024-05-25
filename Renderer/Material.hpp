@@ -3,6 +3,10 @@
 
 class Material
 {
+	public:
 	;
+
+	private:
+	Shader* m_shader;
 
 };

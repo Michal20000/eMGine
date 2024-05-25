@@ -4,6 +4,7 @@
 // #include "Buffer.hpp"
 // #include "Vector.hpp"
 // #include "BitField.hpp"
+#include "Dependencies/glm/glmtypes.hpp"
 #include "EntityEngine/EntityEngine.hpp"
 #include "Logs.hpp"
 #include "Errors.hpp"

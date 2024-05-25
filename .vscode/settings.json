@@ -61,6 +61,6 @@
 		"xloctime": "cpp",
 		"xstddef": "cpp"
 	},
-	"C_Cpp.default.intelliSenseMode": "windows-clang-x64",
+	"C_Cpp.default.intelliSenseMode": "",
 	"clangd.enableCodeCompletion": false
 }
