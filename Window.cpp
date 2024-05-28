@@ -5,9 +5,10 @@
 
 void KeyFunction(GLFWwindow* window, int32_t key, int32_t code, int32_t action, int32_t mode)
 {
-	LOG("GLFW Key: " << key << " " << code << " " << action << " " << mode);
-	LOG("GLFW: " << glfwGetKey(window, GLFW_KEY_A));
-	LOG("");
+	if (key == GLFW_KEY_A) LOG("TIME: " << glfwGetTime());
+	// LOG("GLFW Key: " << key << " " << code << " " << action << " " << mode);
+	// LOG("GLFW: " << glfwGetKey(window, GLFW_KEY_A));
+	// LOG("");
 
 }
 void CharacterFunction(GLFWwindow* window, uint32_t character)

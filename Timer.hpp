@@ -4,6 +4,14 @@
 
 
 
+class Time
+{
+	public:
+
+	private:
+	
+
+};
 struct Timer
 {
 	private:
