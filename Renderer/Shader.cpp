@@ -17,14 +17,14 @@ Shader::~Shader()
 
 void Shader::CompileVertexShader()
 {
-	std::string source = m_LoadShaderSource(m_VertexShaderPath);
-	m_VertexShader = m_CompileShader(source.c_str(), GL_VERTEX_SHADER, "VS log: ");
+	std::string source = LoadShaderSource(m_VertexShaderPath);
+	m_VertexShader = CompileShader(source.c_str(), GL_VERTEX_SHADER, "VS log: ");
 }
 
 void Shader::CompileFragmentShader()
 {
-	std::string source = m_LoadShaderSource(m_FragmentShaderPath);
-	m_FragmentShader = m_CompileShader(source.c_str(), GL_FRAGMENT_SHADER, "FS log: ");
+	std::string source = LoadShaderSource(m_FragmentShaderPath);
+	m_FragmentShader = CompileShader(source.c_str(), GL_FRAGMENT_SHADER, "FS log: ");
 }
 
 void Shader::Bind(uint32_t pipeline)
@@ -33,7 +33,7 @@ void Shader::Bind(uint32_t pipeline)
 	GL(glUseProgramStages(pipeline, GL_FRAGMENT_SHADER_BIT, m_FragmentShader));
 }
 
-std::string Shader::m_LoadShaderSource(const char* filepath)
+std::string Shader::LoadShaderSource(const char* filepath)
 {
 	std::ifstream shader_source(filepath, std::ios::ate | std::ios::in);
 	const size_t length = shader_source.tellg();
@@ -44,7 +44,7 @@ std::string Shader::m_LoadShaderSource(const char* filepath)
 	return shader_str;
 }
 
-uint32_t Shader::m_CompileShader(const char* source, GLenum stage, const char* message)
+uint32_t Shader::CompileShader(const char* source, GLenum stage, const char* message)
 {
 	uint32_t shader = GL(glCreateShaderProgramv(stage, 1, &source));
 	std::string log;

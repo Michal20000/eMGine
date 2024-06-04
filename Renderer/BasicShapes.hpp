@@ -68,8 +68,6 @@ namespace BasicShapes
 				{-1.f, 0.f, 0.f},
 			};
 
-
-
 			/*
 			Vertex vertices[] //vec3 inPos, vec3 normal, vec3 color/uvw
 			{
@@ -114,5 +112,7 @@ namespace BasicShapes
 			meshData.mesh = &mesh;
 
 		}
+
 	};
+	
 }

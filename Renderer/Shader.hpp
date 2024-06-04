@@ -26,7 +26,7 @@ class Shader
 	const char* m_FragmentShaderPath;
 	uint32_t m_VertexShader;
 	uint32_t m_FragmentShader;
-	std::string m_LoadShaderSource(const char* filepath);
-	uint32_t m_CompileShader(const char* source, GLenum stage, const char* message);
+	std::string LoadShaderSource(const char* filepath);
+	uint32_t CompileShader(const char* source, GLenum stage, const char* message);
 
 };
