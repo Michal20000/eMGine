@@ -105,8 +105,14 @@ namespace BasicShapes
 			};
 			*/
 
+			Mesh mesh;
+			mesh.LoadFromProgram(positions, normals);
+
 			Entity entity = ee.CreateEntity();
 			ee.Attach<MeshData>(entity);
+			MeshData& meshData = ee.Fragment<MeshData>(entity);
+			meshData.mesh = &mesh;
+
 		}
 	};
 }

@@ -4,11 +4,15 @@
 Shader::Shader(const char* vert_filepath, const char* frag_filepath) :
 	m_VertexShaderPath(vert_filepath),
 	m_FragmentShaderPath(frag_filepath)
-{}
+{
+	CompileVertexShader();
+	CompileFragmentShader();
+}
 
 Shader::~Shader()
 {
-
+	GL(glDeleteProgram(m_VertexShader));
+	GL(glDeleteProgram(m_FragmentShader));
 }
 
 void Shader::CompileVertexShader()

@@ -32,7 +32,7 @@ Window::Window(const char* title, size_t width, size_t height) :
 	GLFW(m_Window = glfwCreateWindow(m_Width, m_Height, title, m_Display, nullptr));
 	THROW(m_Window == nullptr, GLFWError, "Window should be Created");
 	GLFW(glfwMakeContextCurrent(m_Window));
-	LOG_WARN("Window is Created");
+	LOG_WARN("Window is created");
 
 	// TODO: Callbacks...
 	GLFW(glfwSetKeyCallback(m_Window, &KeyFunction));
@@ -44,7 +44,7 @@ Window::~Window()
 {
 	GLFW(glfwDestroyWindow(m_Window));
 	GLFW(glfwTerminate());
-	LOG_WARN("Window is Destroyed");
+	LOG_WARN("Window is destroyed");
 
 }
 
@@ -55,7 +55,7 @@ void Window::Main()
 		GLFW(glfwPollEvents());
 		//render the cube
 		GLFW(glfwSwapBuffers(m_Window));
-			
+		
 	}
 
 
@@ -64,6 +64,14 @@ void Window::Main()
 	// 1. IO like Mouse or Keyboard;
 	// 2. Update;
 	// 3. Draw;
+
+}
+
+void Window::Terminate()
+{
+	GLFW(glfwDestroyWindow(m_Window));
+	GLFW(glfwTerminate());
+	LOG_WARN("Window is destroyed on purpose");
 
 }
 

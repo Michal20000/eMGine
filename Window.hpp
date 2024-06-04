@@ -24,6 +24,7 @@ class Window
 	Window& operator=(Window&& ob) = delete;
 	
 	void Main();
+	void Terminate();
 	size_t Width();
 	size_t Height();
 	// TODO: Resize(size_t width, size_t height);
