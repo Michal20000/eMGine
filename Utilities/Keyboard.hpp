@@ -1,6 +1,5 @@
 #pragma once
 #include <cstdint>
-#include "Buffer.hpp"
 
 
 
@@ -132,25 +131,42 @@
 
 
 
+class GLFWwindow;
 class Keyboard
 {
 	public:
-	bool IsPressed(uint16_t key);
-	bool IsReleased(uint16_t key);
-	bool Duration(uint16_t key);
-	char Character();
+	friend void KeyFunction(GLFWwindow* window, int32_t key, int32_t code, int32_t action, int32_t mode);
+	friend void CharacterFunction(GLFWwindow* window, uint32_t character);
+
+	static bool IsPressed(uint16_t key);
+	static bool IsReleased(uint16_t key);
+	static float Duration(uint16_t key);
+
+	static bool IsCharacter();
+	static char Character();
 
 	private:
-	struct Key
-	{
-		public:
-		class Time;
-		double ActionTime;
-		Time time_point;
-		// TODO: bool Down;
+	static constexpr size_t s_Length = 317;
+	static constexpr size_t s_Offset = 32;
 
-	};
-	Buffer<Key, 349> Keys
-	char s_Character;
+	static int64_t s_Keys[s_Length];
+	static int64_t s_CharacterTime;
+	static char s_Character;
+
+	// GLRenderer::Avaliable();
+	// VulkanRenderer::Avaliable();
+	// OpenGLRendererAPI::Avaliable();
+	// VulkanRendererAPI::Avaliable();
+	// GLAPI::Avaliable();
+	// VKAPI::Avaliable();
+
+	// Renderer::GraphicsAPI<VulkanRenderer>();
+	// Renderer::RendererAPI<GLRenderer>();
+	// Renderer::GraphicsAPI<OpenGLAPI>();
+	// Renderer::RendererAPI<VKAPI>();
+
+	// // Singleton idea
+	// Renderer::GraphicsAPI(VulkanRenderer::Ob());
+	// Renderer::RendererAPI(GLRenderer::Instance());
 
 };

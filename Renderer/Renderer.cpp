@@ -1,19 +1,19 @@
 #include "Renderer.hpp"
 
-void Renderer::m_DrawObject(MeshData& mesh_data)
-{
-	;
 
+
+Renderer::Renderer(Application& application) :
+	m_Application(application)
+{
+}
+Renderer::~Renderer()
+{
 }
 
-void Renderer::OnFrame(EntityEngine& ee, float delta_time)
+
+
+Application& Renderer::GetApplication()
 {
-
-	for (EntityView view = ee.View<MeshData>(); view.Verify(); ++view)
-	{
-		Entity entity = view.Record();
-		MeshData mesh_data = view.Fragment<MeshData>();
-		m_DrawObject(mesh_data);
-	}
-
+	return m_Application;
+	
 }

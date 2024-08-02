@@ -59,8 +59,20 @@
 		"typeinfo": "cpp",
 		"variant": "cpp",
 		"xloctime": "cpp",
-		"xstddef": "cpp"
+		"xstddef": "cpp",
+		"thread": "cpp",
+		"semaphore": "cpp",
+		"stop_token": "cpp"
 	},
-	"C_Cpp.default.intelliSenseMode": "",
-	"clangd.enableCodeCompletion": false
+	"C_Cpp.default.includePath": [
+		"${workspaceFolder}",
+		"${workspaceFolder}/Containers",
+		"${workspaceFolder}/Renderer",
+		"${workspaceFolder}/EntityEngine",
+		"${workspaceFolder}/Utilities",
+		"${workspaceFolder}/Dependencies/GL3W/include",
+		"${workspaceFolder}/Dependencies/GLFW/include"
+	],
+	"C_Cpp.default.compilerPath": "E:/mingw64/bin/clang++",
+	"C_Cpp.default.cppStandard": "c++20"
 }

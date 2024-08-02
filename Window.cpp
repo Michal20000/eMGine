@@ -1,27 +1,70 @@
 #include "Window.hpp"
+#include "Keyboard.hpp"
+#include "Mouse.hpp"
+#include "Time.hpp"
 #include <glfw3.h>
 
 
 
-void KeyFunction(GLFWwindow* window, int32_t key, int32_t code, int32_t action, int32_t mode)
+void KeyFunction(GLFWwindow* window, int32_t key, int32_t code, int32_t action, int32_t modifier_bits)
 {
-	if (key == GLFW_KEY_A) LOG("TIME: " << glfwGetTime());
-	// LOG("GLFW Key: " << key << " " << code << " " << action << " " << mode);
-	// LOG("GLFW: " << glfwGetKey(window, GLFW_KEY_A));
-	// LOG("");
+	int32_t key_index = key - Keyboard::s_Offset;
+	if (action == GLFW_PRESS && Keyboard::IsReleased(key)) {
+		Keyboard::s_Keys[key_index] = -Time::s_Before;
+
+	}
+	else if (action == GLFW_RELEASE && Keyboard::IsPressed(key)) {
+		Keyboard::s_Keys[key_index] = Time::s_Before;
+
+	}
 
 }
 void CharacterFunction(GLFWwindow* window, uint32_t character)
 {
-	LOG("GLFW Character: " << character);
+	Keyboard::s_CharacterTime = Time::s_Before;
+	Keyboard::s_Character = character;
+
+}
+void MouseLocationFunction(GLFWwindow* window, double location_x, double location_y)
+{
+	Mouse::s_MotionTime = Time::s_Before;
+	Mouse::s_Motion.X = location_x - Mouse::s_Location.X;
+	Mouse::s_Motion.Y = location_y - Mouse::s_Location.Y;
+	Mouse::s_Location.X = location_x;
+	Mouse::s_Location.Y = location_y;
+
+}
+void MouseButtonFunction(GLFWwindow* window, int32_t button, int32_t action, int32_t modifier_bits)
+{
+	if (action == GLFW_PRESS && Mouse::IsReleased(button)) {
+		Mouse::s_Buttons[button] = -Time::s_Before;
+
+	}
+	else if (action == GLFW_RELEASE && Mouse::IsPressed(button)) {
+		Mouse::s_Buttons[button] = Time::s_Before;
+
+	}
+
+}
+void MouseEnterFunction(GLFWwindow* window, int32_t is_entered)
+{
+	Mouse::s_Entered = is_entered ? Time::s_Before : -Time::s_Before;
+
+}
+void MouseScrollFunction(GLFWwindow* window, double offset_x, double offset_y)
+{
+	Mouse::s_ScrollMotionTime = Time::s_Before;
+	Mouse::s_ScrollMotion.X = offset_x;
+	Mouse::s_ScrollMotion.Y = offset_y;
 
 }
 
 
 
-Window::Window(const char* title, size_t width, size_t height) :
-	m_Width(width),
-	m_Height(height)
+Window::Window(Application& application, const char* title, size_t width, size_t height) :
+m_Application(application),
+m_Width(width),
+m_Height(height)
 {
 	GLFW(glfwInit());
 	GLFW(glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4));
@@ -29,65 +72,84 @@ Window::Window(const char* title, size_t width, size_t height) :
 	GLFW(glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE));
 
 	GLFW(m_Display = glfwGetPrimaryMonitor());
+	// TODO: no display
 	GLFW(m_Window = glfwCreateWindow(m_Width, m_Height, title, m_Display, nullptr));
 	THROW(m_Window == nullptr, GLFWError, "Window should be Created");
 	GLFW(glfwMakeContextCurrent(m_Window));
-	LOG_WARN("Window is Created");
+	LOG_WARN("Window is Created"); // TODO: delete
 
-	// TODO: Callbacks...
 	GLFW(glfwSetKeyCallback(m_Window, &KeyFunction));
 	GLFW(glfwSetCharCallback(m_Window, &CharacterFunction));
+	GLFW(glfwSetCursorPosCallback(m_Window, &MouseLocationFunction));
+	GLFW(glfwSetMouseButtonCallback(m_Window, &MouseButtonFunction));
+	GLFW(glfwSetCursorEnterCallback(m_Window, &MouseEnterFunction));
+	GLFW(glfwSetScrollCallback(m_Window, &MouseScrollFunction));
+
+	GLFW(glfwSetInputMode(m_Window, GLFW_CURSOR, GLFW_CURSOR_NORMAL));
+	// TODO: TRUE or FALSE
+	GLFW(glfwSetInputMode(m_Window, GLFW_STICKY_KEYS, GLFW_TRUE));
+	GLFW(glfwSetInputMode(m_Window, GLFW_STICKY_MOUSE_BUTTONS, GLFW_TRUE));
+
+	GLFW(bool is_raw_motion_supported = glfwRawMouseMotionSupported());
+	if (is_raw_motion_supported)
+		GLFW(glfwSetInputMode(m_Window, GLFW_RAW_MOUSE_MOTION, GLFW_TRUE));
+	GLFW(glfwSetInputMode(m_Window, GLFW_LOCK_KEY_MODS, GLFW_TRUE));
 
 }
-
 Window::~Window()
 {
 	GLFW(glfwDestroyWindow(m_Window));
 	GLFW(glfwTerminate());
-	LOG_WARN("Window is Destroyed");
+	LOG_WARN("Window is Destroyed"); // TODO: delete
 
 }
 
-void Window::Main()
+
+
+Application& Window::GetApplication()
 {
-	// TODO: GLFW(glfwWindowShouldClose(m_Window));
-	while (!glfwWindowShouldClose(m_Window)) {
-		GLFW(glfwPollEvents());
-		//render the cube
-		GLFW(glfwSwapBuffers(m_Window));
-			
-	}
-
-
-
-	// Main Loop is basically
-	// 1. IO like Mouse or Keyboard;
-	// 2. Update;
-	// 3. Draw;
+	return m_Application;
 
 }
-
 size_t Window::Width()
 {
 	return m_Width;
 
 }
-
 size_t Window::Height()
 {
 	return m_Height;
 
 }
+void Window::EnableCursor()
+{
+	GLFW(glfwSetInputMode(m_Window, GLFW_CURSOR, GLFW_CURSOR_NORMAL));
 
-// void Window::Width(size_t width)
-// {
+}
+void Window::DisableCursor()
+{
+	GLFW(glfwSetInputMode(m_Window, GLFW_CURSOR, GLFW_CURSOR_DISABLED));
 
-// }
+}
 
-// void Window::Height(size_t height)
-// {
 
-// }
+
+bool Window::IsRunning()
+{
+	GLFW(bool should_close = glfwWindowShouldClose(m_Window));
+	return !should_close;
+
+}
+void Window::PollEvents()
+{
+	GLFW(glfwPollEvents());
+
+}
+void Window::Refresh()
+{
+	GLFW(glfwSwapBuffers(m_Window));
+
+}
 
 
 

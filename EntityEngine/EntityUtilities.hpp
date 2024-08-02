@@ -24,6 +24,7 @@
 // TODO: static_assert(...);
 // TODO: ...
 
+class Application;
 class EntityEngine;
 using CreateFunction = void (*)(void*);
 using DestroyFunction = void (*)(void*);

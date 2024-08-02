@@ -20,13 +20,14 @@ class EntityEngine
 
 
 
-	EntityEngine();
+	EntityEngine(Application& application);
 	EntityEngine(const EntityEngine& ob) = delete;
 	EntityEngine(EntityEngine&& ob) = delete;
 	~EntityEngine();
 	EntityEngine& operator=(const EntityEngine& ob) = delete;
 	EntityEngine& operator=(EntityEngine&& ob) = delete;
 
+	Application& GetApplication();
 	size_t EntitiesLength();
 	size_t TablesLength();
 	size_t EventsLength();
@@ -72,6 +73,7 @@ class EntityEngine
 
 
 
+	Application& m_Application;
 	Vector<EntityPointer> m_Entities;
 	Vector<uint32_t> m_FreeEntityIDs;
 	Vector<EntityTable> m_Tables;

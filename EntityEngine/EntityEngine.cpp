@@ -38,7 +38,8 @@ size_t EntityEngine::FragmentsLength()
 
 
 
-EntityEngine::EntityEngine() :
+EntityEngine::EntityEngine(Application& application) :
+m_Application(application),
 m_Entities(Vector<EntityPointer>(CEIL4KB(ENTITY_LIMIT * BLENGTH(EntityPointer)))),
 m_FreeEntityIDs(Vector<uint32_t>(CEIL4KB(ENTITY_LIMIT * BLENGTH(uint32_t)))),
 m_Tables(Vector<EntityTable>(CEIL4KB(ENTITY_TABLE_LIMIT * BLENGTH(EntityTable)))),
@@ -66,6 +67,11 @@ EntityEngine::~EntityEngine()
 
 }
 
+Application& EntityEngine::GetApplication()
+{
+	return m_Application;
+
+}
 void EntityEngine::OnFrame(float delta_time)
 {
 	for (size_t i = 0; i < FrameLength(); ++i)
