@@ -1,45 +1,19 @@
 #include "Renderer.hpp"
 
-Renderer::Renderer(Window* window) :
-	m_Window(window)
+
+
+Renderer::Renderer(Application& application) :
+	m_Application(application)
 {
-	if (!gl3wIsSupported(4, 6))
-	{
-		LOG_ERROR("OpenGL 4.6 is not available on this computer.");
-		window->Terminate();
-
-	}
-
-	if (gl3wInit())
-	{
-		LOG_ERROR("Failed to initialize OpenGL");
-		window->Terminate();
-
-	}
-
-	GL(glCreateProgramPipelines(1, &m_Pipeline));
-
-	if (m_Shader == nullptr)
-	{
-		m_Shader = new Shader("Resources/default_vert.glsl", "Resources/default_frag.glsl");
-	}
-
-	m_Shader->CompileVertexShader();
-	m_Shader->CompileFragmentShader();
-	m_Shader->Bind(m_Pipeline);
-
 }
 
 Renderer::~Renderer()
 {
-	if (m_Shader != nullptr)
-	{
-		delete m_Shader;
-	}
-
 }
 
-void Renderer::DrawObject(MeshData& mesh_data)
+
+
+Application& Renderer::GetApplication()
 {
 	//TO CHANGE
 	glm::mat4 modelMatrix = glm::mat4(1.0f);

@@ -2,6 +2,23 @@
 
 
 
+// TODO: Timer should be rewritten!
+// struct Timer
+// {
+// 	private:
+// 	std::string mName;
+// 	std::chrono::steady_clock::time_point mBefore;
+// 	std::chrono::steady_clock::time_point mAfter;
+
+// 	public:
+// 	// TODO: Default 5 Rule!
+// 	Timer(const std::string&);
+// 	~Timer();
+
+// };
+
+
+
 Timer::Timer(const std::string& name)
 {
 	mName = name;

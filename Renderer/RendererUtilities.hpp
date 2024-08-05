@@ -4,8 +4,6 @@
 // #include "Buffer.hpp"
 // #include "Vector.hpp"
 // #include "BitField.hpp"
-#include "Dependencies/glm/glmtypes.hpp"
-#include "EntityEngine/EntityEngine.hpp"
 #include "Logs.hpp"
 #include "Errors.hpp"
 
@@ -29,6 +27,7 @@
 #endif
 
 // Deklaracja wskaznikow i typow;
+class Application;
 class GLFWwindow;
 class GLFWmonitor;
 class GLFWcursor;

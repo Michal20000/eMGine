@@ -1,14 +1,4 @@
-#include "Window.hpp"
-
-#include <gl3w.h>
-#include <glfw3.h>
-
-// Containers
-// EntityEngine
-// Renderer
-// Utilities or Essentials
-// Directory for Fragments and
-// Systems...
+#include "Application.hpp"
 
 // TODO: cmake --build in ./Builds
 // TODO: target_include_directories(...);
@@ -80,7 +70,9 @@ int32_t main()
 	// { 1, 1 } -> BEING_PRESSED; UP;
 	// { 1, 0 } -> RELEASED; DOWN:
 
-	Window window = Window("eMGine", 1280, 720);
-	window.Main();
+
+
+	Application application = Application();
+	application.Main();
 
 }

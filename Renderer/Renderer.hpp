@@ -1,28 +1,26 @@
 #pragma once
-#include "GL3W/include/gl3w.h"
-#include "glm.hpp"
-#include "gtc/matrix_transform.hpp"
-#include "gtc/type_ptr.hpp"
+// FIXME: !!!
 #include "EntityEngine/EntityEngine.hpp"
-#include "Window.hpp"
-#include "Shader.hpp"
-#include "MeshData.hpp"
+#include <gl3w.h>
+
+
 
 class Renderer
 {
 	public:
-	Renderer(Window* window);
+	// TODO: 5_RULE
+	// TODO: Application&!!!
+	Renderer(Application& application);
 	~Renderer();
+
+	Application& GetApplication();
 	void Pipeline();
-	void SetShader(Shader& shader);
-	void OnFrame(EntityEngine& ee, float delta_time);
-	//void DrawTerrain();
+	// void SetShader(Shader& shader);
 
 	private:
-	Shader* m_Shader;
-	Window* m_Window;
-	uint32_t m_Pipeline;
-	void DrawObject(MeshData& mesh_data);
-	;
+	Application& m_Application;
+	// Shader* m_shader;
+	uint32_t m_pipeline;
+	// void m_DrawObject(MeshData& mesh_data);
 
 };
