@@ -1,5 +1,4 @@
 #include "VertexArray.hpp"
-#include "RendererUtilities.hpp"
 
 VertexArray::VertexArray()
 {
@@ -41,7 +40,7 @@ uint32_t VertexArray::IndexBuffer()
 	return m_IndexBuffer;
 }
 
-void VertexArray::FillVertexBuffers(glm::vec3 positions[], glm::vec3 normals[], glm::vec3 colors[])
+void VertexArray::FillVertexBuffers(glm::vec3 *positions, glm::vec3 *normals, glm::vec3 *colors)
 {
 	constexpr uint32_t attrib_position = 0;
 	GL(glNamedBufferStorage(m_PositionBuffer, VertexCount*sizeof(glm::vec3), positions, 0));
