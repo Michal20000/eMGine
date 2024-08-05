@@ -1,0 +1,92 @@
+REVIEW kodu dla Shaderow
+Folderu ./utilis nie powinienes dodawac do katalogu ./Renderer;
+Pliki shader_utils.hpp i cpp maja zla konwencje;
+Te funkcjonalnosci z shader_utils powinny byc w klasie Shader;
+
+Pisanie inline moim zdaniem mija sie z celem;
+Poniewaz kompilator wie co ma inline'owac, a co nie;
+Settery i Gettery wedlug konwencji mielismy bez Set i Get np.
+win.Width(1920);
+win.Height(1280);
+LOG(win.Width());
+LOG(win.Height());
+Mam konwencje odnosnie jednej wolnej Linii w Funkcjach i petlach np.
+void Michaelo()
+{
+	Hello();
+	if (false) {
+		Hello();
+		World();
+
+	}
+	World();
+
+}
+Oraz kazda linijka kodu konczy sie znakiem nowej Linii "\n" lub "\r\n";
+
+Przechowywanie wskaznika na m_vertexShaderPath i m_fragmentShaderPath
+nie jest najlepszym pomyslem bo wykorzystujemy to dopiero w funkcji SetVertexShader();
+... Moim zdaniem to powinno być podane w Konstruktorze i od razu tworzone;
+... Brakuje zasady 5; Jesli w konstruktorze tworzymy Shader;
+... To trzeba go gdzies zniszczyc;
+Kopiowanie i Przenoszenie bym usunal z Shaderow poniewaz to moze prowadzic do bledow;
+Swoja droga nazwa CompileShader() troche jest mylaca dla utils bo robi ona troche wiecej;
+Wnioski: Sciecki na plik Shaderu nalezy usunac z Klasy.
+
+Poza tym konwencja to m_VertexShaderPath;
+TODO: Na FB wytlumacz mi ta funkcje glUseProgramStages(pipeline, GL_VERTEX_SHADER_BIT, v_shader);
+TODO: Na FB wytlyumacz mi GLFWmonitor;
+#include <cstdint> do pliku RendererUtilities.hpp;
+W plikach hpp Renderera itp. includujesz #include "RendererUtilities.hpp"
+GL3W tylko do Plikow cpp Poniewaz nie potrzebujesz ich w Hpp;
+
+
+
+REVIEW kodu dla VertexArray
+Brak konstruktorow i destruktorow
+Brak niszczenia obiektow na karcie graficznej;
+
+void VertexArray::AddAttribute(int32_t size, GLenum type, bool normalized, uint32_t relative_offset)
+{
+    // uint32_t m_AttributeLocation = 0; // takie cos powinno byc w klasie
+    glEnableVertexArrayAttrib(m_id, m_AttributeLocation, size, type, normalized, relative_offset);
+    glVertexArrayVertexBuffer(m_id, m_AttributeLocation, m_vertexBuffer, offsetof(t, d), sizeof(t)); //TODO
+    glVertexArrayAttribBinding(m_id, m_AttributeLocation, m_vertexBuffer);
+    s_attributesCount++;
+}
+// Nie potrzeba tutaj Zmiennej klasowej statycznej;
+// Nie ma tworzenia VertexBuffora lub Settera dla niego;
+GLEnum type nie moze byc argumentem takiej funkcji
+Wydaje mi sie, ze to powinno byc raczej zrealizowane Szablonowo
+vao.Push<float>(3);
+vao.Push<float>(3);
+vao.Push<uint32_t>(1);
+Ale na tym bym sie jeszcze troche pochylil, bo to skomplikowane i wymaga przemyslenia;
+int32_t size -> size_t length; // To tez jest konwencja
+
+
+
+Camera.hpp narazie nie analizowalem; Ale te include'y w pliku hpp nie wygladaja Dobrze;
+Dodam dzis Makro do puszczanie Funkcji glCreate...
+
+
+
+Pliki Window.hpp i cpp
+window_size_x -> window_windth;
+window_size_y -> window_height;
+Funkcji Create() nie powinienes tworzyc; Do tego sa Konstruktory;
+m_GLFWwindow; // Moim zdaniem nie musi byc w nazwie m_GLFWwindow
+// Moze byc po prostu m_Window;
+m_Share nie musi byc Czlonkiem Klasy;
+Struktura WindowSize raczej nie jest potrzebna;
+Poniewaz jesli chcemy cos wyprintowac to raczej piszemy
+LOG(win.Width());
+LOG(win.Height())
+WinSize size = win.GetWinSize();
+LOG(size.Width);
+LOG(size.Height);
+GetWindowPtr // Raczej user nie musi miec do tego dostepu
+
+m_windowSize = {(uint16_t)width, (uint16_t)height};
+Ta konstrukcja mi sie nie podoba
+Nie korzystalbym z niej;

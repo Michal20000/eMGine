@@ -1,7 +1,5 @@
 #include "Renderer.hpp"
 
-
-
 Renderer::Renderer(Application& application) :
 	m_Application(application)
 {
