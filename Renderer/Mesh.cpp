@@ -1,19 +1,25 @@
-#include "Dependencies/GL3W/include/gl3w.h"
 #include "Mesh.hpp"
 
-void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[])
+void Mesh()
+{}
+
+void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], uint32_t indices[])
 {
 	if (positions == nullptr || normals == nullptr)
 	{
 		LOG_ERROR("Invalid mesh data to import");
 		return;
 	}
+
+	VertexCount = sizeof(positions)/sizeof(positions[0]);
+	IndexCount = sizeof(indices)/sizeof(indices[0]);
 	
-	vertexArray.FillVertexBuffers(positions, normals, nullptr);
+	m_VertexArray.FillVertexBuffers(VertexCount, positions, normals, nullptr);
+	m_VertexArray.FillIndexBuffer(IndexCount, indices);
 
 }
 
-void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], glm::vec3 colors[])
+void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], glm::vec3 colors[], uint32_t indices[])
 {
 	if (positions == nullptr || normals == nullptr)
 	{
@@ -21,6 +27,23 @@ void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], glm::vec3
 		return;
 	}
 
-	vertexArray.FillVertexBuffers(positions, normals, colors);
+	VertexCount = sizeof(positions)/sizeof(positions[0]);
+	IndexCount = sizeof(indices)/sizeof(indices[0]);
+
+	m_VertexArray.FillVertexBuffers(VertexCount, positions, normals, colors);
+	m_VertexArray.FillIndexBuffer(IndexCount, indices);
 
 }
+
+VertexArray& Mesh::GetVertexArray()
+{
+	return m_VertexArray;
+}
+
+/*
+
+╔══════════════════════════════════════╗
+║ Created by Grzegorz Dombrowski, 2024 ║
+╚══════════════════════════════════════╝
+
+*/

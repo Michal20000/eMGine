@@ -1,21 +1,24 @@
-#pragma once
-#include <glm.hpp>
+#include "Drawable.hpp"
 
-class Shader;
-
-class Material
+void Drawable::SetMesh(Mesh& mesh)
 {
-	public:
-	Shader* ShaderPtr()
-	{
-		return m_Shader;
-	}
+	m_Mesh = &mesh;
+}
 
-	private:
-	Shader* m_Shader;
-	glm::vec4 m_Color;
+Mesh& Drawable::GetMesh()
+{
+	return *m_Mesh;
+}
 
-};
+void Drawable::SetMaterial(Material& material)
+{
+	m_Material = &material;
+}
+
+Material& Drawable::GetMaterial()
+{
+	return *m_Material;
+}
 
 /*
 

@@ -71,7 +71,9 @@
 		"${workspaceFolder}/EntityEngine",
 		"${workspaceFolder}/Utilities",
 		"${workspaceFolder}/Dependencies/GL3W/include",
-		"${workspaceFolder}/Dependencies/GLFW/include"
+		"${workspaceFolder}/Dependencies/GLFW/include",
+		"${workspaceFolder}/Dependencies/glm",
+		"${workspaceFolder}/Dependencies/stb_image.h"
 	],
 	"C_Cpp.default.compilerPath": "E:/mingw64/bin/clang++",
 	"C_Cpp.default.cppStandard": "c++20"

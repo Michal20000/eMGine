@@ -1,10 +1,8 @@
+#include <glfw3.h>
 #include "Window.hpp"
 #include "Keyboard.hpp"
 #include "Mouse.hpp"
 #include "Time.hpp"
-#include <glfw3.h>
-
-
 
 void KeyFunction(GLFWwindow* window, int32_t key, int32_t code, int32_t action, int32_t modifier_bits)
 {
@@ -151,26 +149,6 @@ void Window::Refresh()
 	GLFW(glfwSwapBuffers(m_Window));
 
 }
-
-
-
-
-
-// void Window::Create(uint16_t window_size_x, uint16_t window_size_y, const char* title)
-// {
-//     glfwInit();
-//     // GLFW ERROR;
-// 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-// 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
-// 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-//     m_windowSize = {window_size_x, window_size_y};
-
-//     m_primaryMonitor = glfwGetPrimaryMonitor();
-//     m_GLFWwindow = glfwCreateWindow(m_windowSize.width, m_windowSize.height, title, m_primaryMonitor, m_share);
-//     if (m_GLFWwindow == nullptr) glfwTerminate();
-//     //TODO: throw an exception? //throw std::runtime_error("Failed to recreate window.");
-//     glfwMakeContextCurrent(m_GLFWwindow);
-// }
 
 // void Window::EnableCursor() 
 // {

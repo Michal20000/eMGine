@@ -1,20 +1,23 @@
 #pragma once
-#include <glm.hpp>
+#include "EntityFragment.hpp"
+#include "Mesh.hpp"
 
-class Shader;
+class Material;
 
-class Material
+class Drawable : public EntityFragment<Drawable>
 {
 	public:
-	Shader* ShaderPtr()
-	{
-		return m_Shader;
-	}
-
+	void SetMesh(Mesh& mesh);
+	Mesh& GetMesh();
+	void SetMaterial(Material& material);
+	Material& GetMaterial();
+	;
+	
 	private:
-	Shader* m_Shader;
-	glm::vec4 m_Color;
-
+	Mesh* m_Mesh;
+	Material* m_Material;
+	;
+	
 };
 
 /*

@@ -1,10 +1,9 @@
 #pragma once
-#include "Dependencies/GL3W/include/gl3w.h"
-#include "RendererUtilities.hpp"
-#include <string>
-#include <fstream>
-#include <iostream>
 #include <cstdint>
+#include <string>
+#include <glmtypes.hpp>
+
+typedef unsigned int GLenum;
 
 class Shader
 {
@@ -19,7 +18,6 @@ class Shader
 	void SetFragmentShaderPath(const char* filepath);
 	void CompileVertexShader();
 	void CompileFragmentShader();
-	void Bind(uint32_t pipeline);
 
 	private:
 	const char* m_VertexShaderPath;
@@ -28,5 +26,15 @@ class Shader
 	uint32_t m_FragmentShader;
 	std::string LoadShaderSource(const char* filepath);
 	uint32_t CompileShader(const char* source, GLenum stage, const char* message);
+	void Bind(uint32_t pipeline);
+	void UploadMVP(glm::mat4 mvp_matrix);
 
 };
+
+/*
+
+╔══════════════════════════════════════╗
+║ Created by Grzegorz Dombrowski, 2024 ║
+╚══════════════════════════════════════╝
+
+*/

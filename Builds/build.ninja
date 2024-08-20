@@ -34,7 +34,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = E$:/MM/eMGine/Builds/
+cmake_ninja_workdir = G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Builds/
 # =============================================================================
 # Object build statements for EXECUTABLE target application_debug
 
@@ -44,110 +44,185 @@ cmake_ninja_workdir = E$:/MM/eMGine/Builds/
 
 build cmake_object_order_depends_target_application_debug: phony || CMakeFiles/application_debug.dir
 
-build CMakeFiles/application_debug.dir/Application.cpp.obj: CXX_COMPILER__application_debug_unscanned_ E$:/MM/eMGine/Application.cpp || cmake_object_order_depends_target_application_debug
+build CMakeFiles/application_debug.dir/Application.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Application.cpp || cmake_object_order_depends_target_application_debug
   DEP_FILE = CMakeFiles\application_debug.dir\Application.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_debug.dir
   OBJECT_FILE_DIR = CMakeFiles\application_debug.dir
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
 
-build CMakeFiles/application_debug.dir/Errors.cpp.obj: CXX_COMPILER__application_debug_unscanned_ E$:/MM/eMGine/Errors.cpp || cmake_object_order_depends_target_application_debug
+build CMakeFiles/application_debug.dir/Errors.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Errors.cpp || cmake_object_order_depends_target_application_debug
   DEP_FILE = CMakeFiles\application_debug.dir\Errors.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_debug.dir
   OBJECT_FILE_DIR = CMakeFiles\application_debug.dir
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
 
-build CMakeFiles/application_debug.dir/Main.cpp.obj: CXX_COMPILER__application_debug_unscanned_ E$:/MM/eMGine/Main.cpp || cmake_object_order_depends_target_application_debug
+build CMakeFiles/application_debug.dir/Main.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Main.cpp || cmake_object_order_depends_target_application_debug
   DEP_FILE = CMakeFiles\application_debug.dir\Main.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_debug.dir
   OBJECT_FILE_DIR = CMakeFiles\application_debug.dir
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
 
-build CMakeFiles/application_debug.dir/Memory.cpp.obj: CXX_COMPILER__application_debug_unscanned_ E$:/MM/eMGine/Memory.cpp || cmake_object_order_depends_target_application_debug
+build CMakeFiles/application_debug.dir/Memory.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Memory.cpp || cmake_object_order_depends_target_application_debug
   DEP_FILE = CMakeFiles\application_debug.dir\Memory.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_debug.dir
   OBJECT_FILE_DIR = CMakeFiles\application_debug.dir
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
 
-build CMakeFiles/application_debug.dir/Window.cpp.obj: CXX_COMPILER__application_debug_unscanned_ E$:/MM/eMGine/Window.cpp || cmake_object_order_depends_target_application_debug
+build CMakeFiles/application_debug.dir/Window.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Window.cpp || cmake_object_order_depends_target_application_debug
   DEP_FILE = CMakeFiles\application_debug.dir\Window.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_debug.dir
   OBJECT_FILE_DIR = CMakeFiles\application_debug.dir
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
 
-build CMakeFiles/application_debug.dir/EntityEngine/EntityContainer.cpp.obj: CXX_COMPILER__application_debug_unscanned_ E$:/MM/eMGine/EntityEngine/EntityContainer.cpp || cmake_object_order_depends_target_application_debug
+build CMakeFiles/application_debug.dir/EntityEngine/EntityContainer.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/EntityEngine/EntityContainer.cpp || cmake_object_order_depends_target_application_debug
   DEP_FILE = CMakeFiles\application_debug.dir\EntityEngine\EntityContainer.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_debug.dir
   OBJECT_FILE_DIR = CMakeFiles\application_debug.dir\EntityEngine
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
 
-build CMakeFiles/application_debug.dir/EntityEngine/EntityEngine.cpp.obj: CXX_COMPILER__application_debug_unscanned_ E$:/MM/eMGine/EntityEngine/EntityEngine.cpp || cmake_object_order_depends_target_application_debug
+build CMakeFiles/application_debug.dir/EntityEngine/EntityEngine.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/EntityEngine/EntityEngine.cpp || cmake_object_order_depends_target_application_debug
   DEP_FILE = CMakeFiles\application_debug.dir\EntityEngine\EntityEngine.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_debug.dir
   OBJECT_FILE_DIR = CMakeFiles\application_debug.dir\EntityEngine
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
 
-build CMakeFiles/application_debug.dir/EntityEngine/EntityTable.cpp.obj: CXX_COMPILER__application_debug_unscanned_ E$:/MM/eMGine/EntityEngine/EntityTable.cpp || cmake_object_order_depends_target_application_debug
+build CMakeFiles/application_debug.dir/EntityEngine/EntityTable.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/EntityEngine/EntityTable.cpp || cmake_object_order_depends_target_application_debug
   DEP_FILE = CMakeFiles\application_debug.dir\EntityEngine\EntityTable.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_debug.dir
   OBJECT_FILE_DIR = CMakeFiles\application_debug.dir\EntityEngine
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
 
-build CMakeFiles/application_debug.dir/EntityEngine/EntityView.cpp.obj: CXX_COMPILER__application_debug_unscanned_ E$:/MM/eMGine/EntityEngine/EntityView.cpp || cmake_object_order_depends_target_application_debug
+build CMakeFiles/application_debug.dir/EntityEngine/EntityView.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/EntityEngine/EntityView.cpp || cmake_object_order_depends_target_application_debug
   DEP_FILE = CMakeFiles\application_debug.dir\EntityEngine\EntityView.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_debug.dir
   OBJECT_FILE_DIR = CMakeFiles\application_debug.dir\EntityEngine
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
 
-build CMakeFiles/application_debug.dir/Renderer/Renderer.cpp.obj: CXX_COMPILER__application_debug_unscanned_ E$:/MM/eMGine/Renderer/Renderer.cpp || cmake_object_order_depends_target_application_debug
-  DEP_FILE = CMakeFiles\application_debug.dir\Renderer\Renderer.cpp.obj.d
+build CMakeFiles/application_debug.dir/Renderer/BasicShapes.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Renderer/BasicShapes.cpp || cmake_object_order_depends_target_application_debug
+  DEP_FILE = CMakeFiles\application_debug.dir\Renderer\BasicShapes.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_debug.dir
   OBJECT_FILE_DIR = CMakeFiles\application_debug.dir\Renderer
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
 
-build CMakeFiles/application_debug.dir/Utilities/Keyboard.cpp.obj: CXX_COMPILER__application_debug_unscanned_ E$:/MM/eMGine/Utilities/Keyboard.cpp || cmake_object_order_depends_target_application_debug
+build CMakeFiles/application_debug.dir/Renderer/Drawable.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Renderer/Drawable.cpp || cmake_object_order_depends_target_application_debug
+  DEP_FILE = CMakeFiles\application_debug.dir\Renderer\Drawable.cpp.obj.d
+  FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
+  OBJECT_DIR = CMakeFiles\application_debug.dir
+  OBJECT_FILE_DIR = CMakeFiles\application_debug.dir\Renderer
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
+
+build CMakeFiles/application_debug.dir/Renderer/Mesh.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Renderer/Mesh.cpp || cmake_object_order_depends_target_application_debug
+  DEP_FILE = CMakeFiles\application_debug.dir\Renderer\Mesh.cpp.obj.d
+  FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
+  OBJECT_DIR = CMakeFiles\application_debug.dir
+  OBJECT_FILE_DIR = CMakeFiles\application_debug.dir\Renderer
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
+
+build CMakeFiles/application_debug.dir/Renderer/Renderer.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Renderer/Renderer.cpp || cmake_object_order_depends_target_application_debug
+  DEP_FILE = CMakeFiles\application_debug.dir\Renderer\Renderer.cpp.obj.d
+  FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
+  OBJECT_DIR = CMakeFiles\application_debug.dir
+  OBJECT_FILE_DIR = CMakeFiles\application_debug.dir\Renderer
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
+
+build CMakeFiles/application_debug.dir/Renderer/Shader.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Renderer/Shader.cpp || cmake_object_order_depends_target_application_debug
+  DEP_FILE = CMakeFiles\application_debug.dir\Renderer\Shader.cpp.obj.d
+  FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
+  OBJECT_DIR = CMakeFiles\application_debug.dir
+  OBJECT_FILE_DIR = CMakeFiles\application_debug.dir\Renderer
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
+
+build CMakeFiles/application_debug.dir/Renderer/VertexArray.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Renderer/VertexArray.cpp || cmake_object_order_depends_target_application_debug
+  DEP_FILE = CMakeFiles\application_debug.dir\Renderer\VertexArray.cpp.obj.d
+  FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
+  OBJECT_DIR = CMakeFiles\application_debug.dir
+  OBJECT_FILE_DIR = CMakeFiles\application_debug.dir\Renderer
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
+
+build CMakeFiles/application_debug.dir/Utilities/Keyboard.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Utilities/Keyboard.cpp || cmake_object_order_depends_target_application_debug
   DEP_FILE = CMakeFiles\application_debug.dir\Utilities\Keyboard.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_debug.dir
   OBJECT_FILE_DIR = CMakeFiles\application_debug.dir\Utilities
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
 
-build CMakeFiles/application_debug.dir/Utilities/Mouse.cpp.obj: CXX_COMPILER__application_debug_unscanned_ E$:/MM/eMGine/Utilities/Mouse.cpp || cmake_object_order_depends_target_application_debug
+build CMakeFiles/application_debug.dir/Utilities/Mouse.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Utilities/Mouse.cpp || cmake_object_order_depends_target_application_debug
   DEP_FILE = CMakeFiles\application_debug.dir\Utilities\Mouse.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_debug.dir
   OBJECT_FILE_DIR = CMakeFiles\application_debug.dir\Utilities
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
 
-build CMakeFiles/application_debug.dir/Utilities/Time.cpp.obj: CXX_COMPILER__application_debug_unscanned_ E$:/MM/eMGine/Utilities/Time.cpp || cmake_object_order_depends_target_application_debug
+build CMakeFiles/application_debug.dir/Utilities/Time.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Utilities/Time.cpp || cmake_object_order_depends_target_application_debug
   DEP_FILE = CMakeFiles\application_debug.dir\Utilities\Time.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_debug.dir
   OBJECT_FILE_DIR = CMakeFiles\application_debug.dir\Utilities
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
 
-build CMakeFiles/application_debug.dir/Utilities/Math/Math.cpp.obj: CXX_COMPILER__application_debug_unscanned_ E$:/MM/eMGine/Utilities/Math/Math.cpp || cmake_object_order_depends_target_application_debug
+build CMakeFiles/application_debug.dir/Utilities/Math/Math.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Utilities/Math/Math.cpp || cmake_object_order_depends_target_application_debug
   DEP_FILE = CMakeFiles\application_debug.dir\Utilities\Math\Math.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_debug.dir
   OBJECT_FILE_DIR = CMakeFiles\application_debug.dir\Utilities\Math
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
 
-build CMakeFiles/application_debug.dir/Dependencies/GL3W/gl3w.cpp.obj: CXX_COMPILER__application_debug_unscanned_ E$:/MM/eMGine/Dependencies/GL3W/gl3w.cpp || cmake_object_order_depends_target_application_debug
+build CMakeFiles/application_debug.dir/Dependencies/GL3W/gl3w.cpp.obj: CXX_COMPILER__application_debug_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Dependencies/GL3W/gl3w.cpp || cmake_object_order_depends_target_application_debug
   DEP_FILE = CMakeFiles\application_debug.dir\Dependencies\GL3W\gl3w.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DDEBUG=1 -O0 -g"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_debug.dir
   OBJECT_FILE_DIR = CMakeFiles\application_debug.dir\Dependencies\GL3W
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
 
 
 # =============================================================================
@@ -155,17 +230,18 @@ build CMakeFiles/application_debug.dir/Dependencies/GL3W/gl3w.cpp.obj: CXX_COMPI
 
 
 #############################################
-# Link the executable E:\MM\eMGine\Binaries\Debug\application_debug.exe
+# Link the executable G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.exe
 
-build E$:/MM/eMGine/Binaries/Debug/application_debug.exe: CXX_EXECUTABLE_LINKER__application_debug_ CMakeFiles/application_debug.dir/Application.cpp.obj CMakeFiles/application_debug.dir/Errors.cpp.obj CMakeFiles/application_debug.dir/Main.cpp.obj CMakeFiles/application_debug.dir/Memory.cpp.obj CMakeFiles/application_debug.dir/Window.cpp.obj CMakeFiles/application_debug.dir/EntityEngine/EntityContainer.cpp.obj CMakeFiles/application_debug.dir/EntityEngine/EntityEngine.cpp.obj CMakeFiles/application_debug.dir/EntityEngine/EntityTable.cpp.obj CMakeFiles/application_debug.dir/EntityEngine/EntityView.cpp.obj CMakeFiles/application_debug.dir/Renderer/Renderer.cpp.obj CMakeFiles/application_debug.dir/Utilities/Keyboard.cpp.obj CMakeFiles/application_debug.dir/Utilities/Mouse.cpp.obj CMakeFiles/application_debug.dir/Utilities/Time.cpp.obj CMakeFiles/application_debug.dir/Utilities/Math/Math.cpp.obj CMakeFiles/application_debug.dir/Dependencies/GL3W/gl3w.cpp.obj
+build G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Binaries/Debug/application_debug.exe: CXX_EXECUTABLE_LINKER__application_debug_ CMakeFiles/application_debug.dir/Application.cpp.obj CMakeFiles/application_debug.dir/Errors.cpp.obj CMakeFiles/application_debug.dir/Main.cpp.obj CMakeFiles/application_debug.dir/Memory.cpp.obj CMakeFiles/application_debug.dir/Window.cpp.obj CMakeFiles/application_debug.dir/EntityEngine/EntityContainer.cpp.obj CMakeFiles/application_debug.dir/EntityEngine/EntityEngine.cpp.obj CMakeFiles/application_debug.dir/EntityEngine/EntityTable.cpp.obj CMakeFiles/application_debug.dir/EntityEngine/EntityView.cpp.obj CMakeFiles/application_debug.dir/Renderer/BasicShapes.cpp.obj CMakeFiles/application_debug.dir/Renderer/Drawable.cpp.obj CMakeFiles/application_debug.dir/Renderer/Mesh.cpp.obj CMakeFiles/application_debug.dir/Renderer/Renderer.cpp.obj CMakeFiles/application_debug.dir/Renderer/Shader.cpp.obj CMakeFiles/application_debug.dir/Renderer/VertexArray.cpp.obj CMakeFiles/application_debug.dir/Utilities/Keyboard.cpp.obj CMakeFiles/application_debug.dir/Utilities/Mouse.cpp.obj CMakeFiles/application_debug.dir/Utilities/Time.cpp.obj CMakeFiles/application_debug.dir/Utilities/Math/Math.cpp.obj CMakeFiles/application_debug.dir/Dependencies/GL3W/gl3w.cpp.obj
   LINK_LIBRARIES = -lglfw3  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  LINK_PATH = -LE:/MM/eMGine/./Dependencies/GLFW
+  LINK_PATH = -L"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW"
   OBJECT_DIR = CMakeFiles\application_debug.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = E:\MM\eMGine\Binaries\Debug\application_debug.exe
+  TARGET_COMPILE_PDB = CMakeFiles\application_debug.dir\
+  TARGET_FILE = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.exe"
   TARGET_IMPLIB = libapplication_debug.dll.a
-  TARGET_PDB = application_debug.exe.dbg
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.pdb"
 
 # =============================================================================
 # Object build statements for EXECUTABLE target application_release
@@ -176,110 +252,185 @@ build E$:/MM/eMGine/Binaries/Debug/application_debug.exe: CXX_EXECUTABLE_LINKER_
 
 build cmake_object_order_depends_target_application_release: phony || CMakeFiles/application_release.dir
 
-build CMakeFiles/application_release.dir/Application.cpp.obj: CXX_COMPILER__application_release_unscanned_ E$:/MM/eMGine/Application.cpp || cmake_object_order_depends_target_application_release
+build CMakeFiles/application_release.dir/Application.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Application.cpp || cmake_object_order_depends_target_application_release
   DEP_FILE = CMakeFiles\application_release.dir\Application.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_release.dir
   OBJECT_FILE_DIR = CMakeFiles\application_release.dir
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
 
-build CMakeFiles/application_release.dir/Errors.cpp.obj: CXX_COMPILER__application_release_unscanned_ E$:/MM/eMGine/Errors.cpp || cmake_object_order_depends_target_application_release
+build CMakeFiles/application_release.dir/Errors.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Errors.cpp || cmake_object_order_depends_target_application_release
   DEP_FILE = CMakeFiles\application_release.dir\Errors.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_release.dir
   OBJECT_FILE_DIR = CMakeFiles\application_release.dir
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
 
-build CMakeFiles/application_release.dir/Main.cpp.obj: CXX_COMPILER__application_release_unscanned_ E$:/MM/eMGine/Main.cpp || cmake_object_order_depends_target_application_release
+build CMakeFiles/application_release.dir/Main.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Main.cpp || cmake_object_order_depends_target_application_release
   DEP_FILE = CMakeFiles\application_release.dir\Main.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_release.dir
   OBJECT_FILE_DIR = CMakeFiles\application_release.dir
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
 
-build CMakeFiles/application_release.dir/Memory.cpp.obj: CXX_COMPILER__application_release_unscanned_ E$:/MM/eMGine/Memory.cpp || cmake_object_order_depends_target_application_release
+build CMakeFiles/application_release.dir/Memory.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Memory.cpp || cmake_object_order_depends_target_application_release
   DEP_FILE = CMakeFiles\application_release.dir\Memory.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_release.dir
   OBJECT_FILE_DIR = CMakeFiles\application_release.dir
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
 
-build CMakeFiles/application_release.dir/Window.cpp.obj: CXX_COMPILER__application_release_unscanned_ E$:/MM/eMGine/Window.cpp || cmake_object_order_depends_target_application_release
+build CMakeFiles/application_release.dir/Window.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Window.cpp || cmake_object_order_depends_target_application_release
   DEP_FILE = CMakeFiles\application_release.dir\Window.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_release.dir
   OBJECT_FILE_DIR = CMakeFiles\application_release.dir
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
 
-build CMakeFiles/application_release.dir/EntityEngine/EntityContainer.cpp.obj: CXX_COMPILER__application_release_unscanned_ E$:/MM/eMGine/EntityEngine/EntityContainer.cpp || cmake_object_order_depends_target_application_release
+build CMakeFiles/application_release.dir/EntityEngine/EntityContainer.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/EntityEngine/EntityContainer.cpp || cmake_object_order_depends_target_application_release
   DEP_FILE = CMakeFiles\application_release.dir\EntityEngine\EntityContainer.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_release.dir
   OBJECT_FILE_DIR = CMakeFiles\application_release.dir\EntityEngine
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
 
-build CMakeFiles/application_release.dir/EntityEngine/EntityEngine.cpp.obj: CXX_COMPILER__application_release_unscanned_ E$:/MM/eMGine/EntityEngine/EntityEngine.cpp || cmake_object_order_depends_target_application_release
+build CMakeFiles/application_release.dir/EntityEngine/EntityEngine.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/EntityEngine/EntityEngine.cpp || cmake_object_order_depends_target_application_release
   DEP_FILE = CMakeFiles\application_release.dir\EntityEngine\EntityEngine.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_release.dir
   OBJECT_FILE_DIR = CMakeFiles\application_release.dir\EntityEngine
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
 
-build CMakeFiles/application_release.dir/EntityEngine/EntityTable.cpp.obj: CXX_COMPILER__application_release_unscanned_ E$:/MM/eMGine/EntityEngine/EntityTable.cpp || cmake_object_order_depends_target_application_release
+build CMakeFiles/application_release.dir/EntityEngine/EntityTable.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/EntityEngine/EntityTable.cpp || cmake_object_order_depends_target_application_release
   DEP_FILE = CMakeFiles\application_release.dir\EntityEngine\EntityTable.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_release.dir
   OBJECT_FILE_DIR = CMakeFiles\application_release.dir\EntityEngine
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
 
-build CMakeFiles/application_release.dir/EntityEngine/EntityView.cpp.obj: CXX_COMPILER__application_release_unscanned_ E$:/MM/eMGine/EntityEngine/EntityView.cpp || cmake_object_order_depends_target_application_release
+build CMakeFiles/application_release.dir/EntityEngine/EntityView.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/EntityEngine/EntityView.cpp || cmake_object_order_depends_target_application_release
   DEP_FILE = CMakeFiles\application_release.dir\EntityEngine\EntityView.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_release.dir
   OBJECT_FILE_DIR = CMakeFiles\application_release.dir\EntityEngine
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
 
-build CMakeFiles/application_release.dir/Renderer/Renderer.cpp.obj: CXX_COMPILER__application_release_unscanned_ E$:/MM/eMGine/Renderer/Renderer.cpp || cmake_object_order_depends_target_application_release
-  DEP_FILE = CMakeFiles\application_release.dir\Renderer\Renderer.cpp.obj.d
+build CMakeFiles/application_release.dir/Renderer/BasicShapes.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Renderer/BasicShapes.cpp || cmake_object_order_depends_target_application_release
+  DEP_FILE = CMakeFiles\application_release.dir\Renderer\BasicShapes.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_release.dir
   OBJECT_FILE_DIR = CMakeFiles\application_release.dir\Renderer
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
 
-build CMakeFiles/application_release.dir/Utilities/Keyboard.cpp.obj: CXX_COMPILER__application_release_unscanned_ E$:/MM/eMGine/Utilities/Keyboard.cpp || cmake_object_order_depends_target_application_release
+build CMakeFiles/application_release.dir/Renderer/Drawable.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Renderer/Drawable.cpp || cmake_object_order_depends_target_application_release
+  DEP_FILE = CMakeFiles\application_release.dir\Renderer\Drawable.cpp.obj.d
+  FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
+  OBJECT_DIR = CMakeFiles\application_release.dir
+  OBJECT_FILE_DIR = CMakeFiles\application_release.dir\Renderer
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
+
+build CMakeFiles/application_release.dir/Renderer/Mesh.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Renderer/Mesh.cpp || cmake_object_order_depends_target_application_release
+  DEP_FILE = CMakeFiles\application_release.dir\Renderer\Mesh.cpp.obj.d
+  FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
+  OBJECT_DIR = CMakeFiles\application_release.dir
+  OBJECT_FILE_DIR = CMakeFiles\application_release.dir\Renderer
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
+
+build CMakeFiles/application_release.dir/Renderer/Renderer.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Renderer/Renderer.cpp || cmake_object_order_depends_target_application_release
+  DEP_FILE = CMakeFiles\application_release.dir\Renderer\Renderer.cpp.obj.d
+  FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
+  OBJECT_DIR = CMakeFiles\application_release.dir
+  OBJECT_FILE_DIR = CMakeFiles\application_release.dir\Renderer
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
+
+build CMakeFiles/application_release.dir/Renderer/Shader.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Renderer/Shader.cpp || cmake_object_order_depends_target_application_release
+  DEP_FILE = CMakeFiles\application_release.dir\Renderer\Shader.cpp.obj.d
+  FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
+  OBJECT_DIR = CMakeFiles\application_release.dir
+  OBJECT_FILE_DIR = CMakeFiles\application_release.dir\Renderer
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
+
+build CMakeFiles/application_release.dir/Renderer/VertexArray.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Renderer/VertexArray.cpp || cmake_object_order_depends_target_application_release
+  DEP_FILE = CMakeFiles\application_release.dir\Renderer\VertexArray.cpp.obj.d
+  FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
+  OBJECT_DIR = CMakeFiles\application_release.dir
+  OBJECT_FILE_DIR = CMakeFiles\application_release.dir\Renderer
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
+
+build CMakeFiles/application_release.dir/Utilities/Keyboard.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Utilities/Keyboard.cpp || cmake_object_order_depends_target_application_release
   DEP_FILE = CMakeFiles\application_release.dir\Utilities\Keyboard.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_release.dir
   OBJECT_FILE_DIR = CMakeFiles\application_release.dir\Utilities
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
 
-build CMakeFiles/application_release.dir/Utilities/Mouse.cpp.obj: CXX_COMPILER__application_release_unscanned_ E$:/MM/eMGine/Utilities/Mouse.cpp || cmake_object_order_depends_target_application_release
+build CMakeFiles/application_release.dir/Utilities/Mouse.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Utilities/Mouse.cpp || cmake_object_order_depends_target_application_release
   DEP_FILE = CMakeFiles\application_release.dir\Utilities\Mouse.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_release.dir
   OBJECT_FILE_DIR = CMakeFiles\application_release.dir\Utilities
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
 
-build CMakeFiles/application_release.dir/Utilities/Time.cpp.obj: CXX_COMPILER__application_release_unscanned_ E$:/MM/eMGine/Utilities/Time.cpp || cmake_object_order_depends_target_application_release
+build CMakeFiles/application_release.dir/Utilities/Time.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Utilities/Time.cpp || cmake_object_order_depends_target_application_release
   DEP_FILE = CMakeFiles\application_release.dir\Utilities\Time.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_release.dir
   OBJECT_FILE_DIR = CMakeFiles\application_release.dir\Utilities
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
 
-build CMakeFiles/application_release.dir/Utilities/Math/Math.cpp.obj: CXX_COMPILER__application_release_unscanned_ E$:/MM/eMGine/Utilities/Math/Math.cpp || cmake_object_order_depends_target_application_release
+build CMakeFiles/application_release.dir/Utilities/Math/Math.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Utilities/Math/Math.cpp || cmake_object_order_depends_target_application_release
   DEP_FILE = CMakeFiles\application_release.dir\Utilities\Math\Math.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_release.dir
   OBJECT_FILE_DIR = CMakeFiles\application_release.dir\Utilities\Math
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
 
-build CMakeFiles/application_release.dir/Dependencies/GL3W/gl3w.cpp.obj: CXX_COMPILER__application_release_unscanned_ E$:/MM/eMGine/Dependencies/GL3W/gl3w.cpp || cmake_object_order_depends_target_application_release
+build CMakeFiles/application_release.dir/Dependencies/GL3W/gl3w.cpp.obj: CXX_COMPILER__application_release_unscanned_ G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Dependencies/GL3W/gl3w.cpp || cmake_object_order_depends_target_application_release
   DEP_FILE = CMakeFiles\application_release.dir\Dependencies\GL3W\gl3w.cpp.obj.d
   FLAGS = -std=gnu++20 -DALL=1 "-DRELEASE=1 -O3"
-  INCLUDES = -IE:/MM/eMGine/. -IE:/MM/eMGine/./Containers -IE:/MM/eMGine/./EntityEngine -IE:/MM/eMGine/./Renderer -IE:/MM/eMGine/./Utilities -IE:/MM/eMGine/./Utilities/Math -IE:/MM/eMGine/./Dependencies/GLFW/include -IE:/MM/eMGine/./Dependencies/GL3W/include -IE:/MM/eMGine/./Dependencies/GLM
+  INCLUDES = -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/." -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Containers" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./EntityEngine" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Renderer" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Utilities/Math" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GL3W/include" -I"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLM"
   OBJECT_DIR = CMakeFiles\application_release.dir
   OBJECT_FILE_DIR = CMakeFiles\application_release.dir\Dependencies\GL3W
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
 
 
 # =============================================================================
@@ -287,24 +438,25 @@ build CMakeFiles/application_release.dir/Dependencies/GL3W/gl3w.cpp.obj: CXX_COM
 
 
 #############################################
-# Link the executable E:\MM\eMGine\Binaries\Release\application_release.exe
+# Link the executable G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.exe
 
-build E$:/MM/eMGine/Binaries/Release/application_release.exe: CXX_EXECUTABLE_LINKER__application_release_ CMakeFiles/application_release.dir/Application.cpp.obj CMakeFiles/application_release.dir/Errors.cpp.obj CMakeFiles/application_release.dir/Main.cpp.obj CMakeFiles/application_release.dir/Memory.cpp.obj CMakeFiles/application_release.dir/Window.cpp.obj CMakeFiles/application_release.dir/EntityEngine/EntityContainer.cpp.obj CMakeFiles/application_release.dir/EntityEngine/EntityEngine.cpp.obj CMakeFiles/application_release.dir/EntityEngine/EntityTable.cpp.obj CMakeFiles/application_release.dir/EntityEngine/EntityView.cpp.obj CMakeFiles/application_release.dir/Renderer/Renderer.cpp.obj CMakeFiles/application_release.dir/Utilities/Keyboard.cpp.obj CMakeFiles/application_release.dir/Utilities/Mouse.cpp.obj CMakeFiles/application_release.dir/Utilities/Time.cpp.obj CMakeFiles/application_release.dir/Utilities/Math/Math.cpp.obj CMakeFiles/application_release.dir/Dependencies/GL3W/gl3w.cpp.obj
+build G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Binaries/Release/application_release.exe: CXX_EXECUTABLE_LINKER__application_release_ CMakeFiles/application_release.dir/Application.cpp.obj CMakeFiles/application_release.dir/Errors.cpp.obj CMakeFiles/application_release.dir/Main.cpp.obj CMakeFiles/application_release.dir/Memory.cpp.obj CMakeFiles/application_release.dir/Window.cpp.obj CMakeFiles/application_release.dir/EntityEngine/EntityContainer.cpp.obj CMakeFiles/application_release.dir/EntityEngine/EntityEngine.cpp.obj CMakeFiles/application_release.dir/EntityEngine/EntityTable.cpp.obj CMakeFiles/application_release.dir/EntityEngine/EntityView.cpp.obj CMakeFiles/application_release.dir/Renderer/BasicShapes.cpp.obj CMakeFiles/application_release.dir/Renderer/Drawable.cpp.obj CMakeFiles/application_release.dir/Renderer/Mesh.cpp.obj CMakeFiles/application_release.dir/Renderer/Renderer.cpp.obj CMakeFiles/application_release.dir/Renderer/Shader.cpp.obj CMakeFiles/application_release.dir/Renderer/VertexArray.cpp.obj CMakeFiles/application_release.dir/Utilities/Keyboard.cpp.obj CMakeFiles/application_release.dir/Utilities/Mouse.cpp.obj CMakeFiles/application_release.dir/Utilities/Time.cpp.obj CMakeFiles/application_release.dir/Utilities/Math/Math.cpp.obj CMakeFiles/application_release.dir/Dependencies/GL3W/gl3w.cpp.obj
   LINK_LIBRARIES = -lglfw3  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  LINK_PATH = -LE:/MM/eMGine/./Dependencies/GLFW
+  LINK_PATH = -L"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW"
   OBJECT_DIR = CMakeFiles\application_release.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = E:\MM\eMGine\Binaries\Release\application_release.exe
+  TARGET_COMPILE_PDB = CMakeFiles\application_release.dir\
+  TARGET_FILE = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.exe"
   TARGET_IMPLIB = libapplication_release.dll.a
-  TARGET_PDB = application_release.exe.dbg
+  TARGET_PDB = "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.pdb"
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D E:\MM\eMGine\Builds && E:\mingw64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "G:\Grzegorz Dombrowski\Git Projects\eMGine\Builds" && C:\mingw64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -315,7 +467,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D E:\MM\eMGine\Builds && E:\mingw64\bin\cmake.exe --regenerate-during-build -SE:\MM\eMGine -BE:\MM\eMGine\Builds"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "G:\Grzegorz Dombrowski\Git Projects\eMGine\Builds" && C:\mingw64\bin\cmake.exe --regenerate-during-build -S"G:\Grzegorz Dombrowski\Git Projects\eMGine" -B"G:\Grzegorz Dombrowski\Git Projects\eMGine\Builds""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -325,13 +477,13 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build application_debug: phony E$:/MM/eMGine/Binaries/Debug/application_debug.exe
+build application_debug: phony G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Binaries/Debug/application_debug.exe
 
-build application_debug.exe: phony E$:/MM/eMGine/Binaries/Debug/application_debug.exe
+build application_debug.exe: phony G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Binaries/Debug/application_debug.exe
 
-build application_release: phony E$:/MM/eMGine/Binaries/Release/application_release.exe
+build application_release: phony G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Binaries/Release/application_release.exe
 
-build application_release.exe: phony E$:/MM/eMGine/Binaries/Release/application_release.exe
+build application_release.exe: phony G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Binaries/Release/application_release.exe
 
 # =============================================================================
 # Folder targets.
@@ -339,9 +491,9 @@ build application_release.exe: phony E$:/MM/eMGine/Binaries/Release/application_
 # =============================================================================
 
 #############################################
-# Folder: E:/MM/eMGine/Builds
+# Folder: G:/Grzegorz Dombrowski/Git Projects/eMGine/Builds
 
-build all: phony E$:/MM/eMGine/Binaries/Debug/application_debug.exe E$:/MM/eMGine/Binaries/Release/application_release.exe
+build all: phony G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Binaries/Debug/application_debug.exe G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/Binaries/Release/application_release.exe
 
 # =============================================================================
 # Built-in targets
@@ -350,14 +502,14 @@ build all: phony E$:/MM/eMGine/Binaries/Debug/application_debug.exe E$:/MM/eMGin
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles/3.28.2/CMakeCCompiler.cmake CMakeFiles/3.28.2/CMakeCXXCompiler.cmake CMakeFiles/3.28.2/CMakeRCCompiler.cmake CMakeFiles/3.28.2/CMakeSystem.cmake E$:/MM/eMGine/CMakeLists.txt E$:/mingw64/share/cmake-3.28/Modules/CMakeCInformation.cmake E$:/mingw64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake E$:/mingw64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake E$:/mingw64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake E$:/mingw64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake E$:/mingw64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake E$:/mingw64/share/cmake-3.28/Modules/CMakeRCInformation.cmake E$:/mingw64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake E$:/mingw64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake E$:/mingw64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang-C.cmake E$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake E$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang.cmake E$:/mingw64/share/cmake-3.28/Modules/Compiler/GNU.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Clang-C.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Clang-CXX.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Clang.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | C$:/mingw64/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in C$:/mingw64/share/cmake-3.28/Modules/CMakeCCompilerABI.c C$:/mingw64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in C$:/mingw64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp C$:/mingw64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeDetermineRCCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeNinjaFindMake.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeRCCompiler.cmake.in C$:/mingw64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeSystem.cmake.in C$:/mingw64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeTestRCCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang-C.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang-FindBinUtils.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Clang-C.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Clang-CXX.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Clang.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Determine-CXX.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.28.2/CMakeCCompiler.cmake CMakeFiles/3.28.2/CMakeCXXCompiler.cmake CMakeFiles/3.28.2/CMakeRCCompiler.cmake CMakeFiles/3.28.2/CMakeSystem.cmake G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build CMakeCache.txt CMakeFiles/3.28.2/CMakeCCompiler.cmake CMakeFiles/3.28.2/CMakeCXXCompiler.cmake CMakeFiles/3.28.2/CMakeRCCompiler.cmake CMakeFiles/3.28.2/CMakeSystem.cmake E$:/MM/eMGine/CMakeLists.txt E$:/mingw64/share/cmake-3.28/Modules/CMakeCInformation.cmake E$:/mingw64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake E$:/mingw64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake E$:/mingw64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake E$:/mingw64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake E$:/mingw64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake E$:/mingw64/share/cmake-3.28/Modules/CMakeRCInformation.cmake E$:/mingw64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake E$:/mingw64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake E$:/mingw64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang-C.cmake E$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake E$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang.cmake E$:/mingw64/share/cmake-3.28/Modules/Compiler/GNU.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Clang-C.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Clang-CXX.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Clang.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/Windows.cmake E$:/mingw64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake: phony
+build C$:/mingw64/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in C$:/mingw64/share/cmake-3.28/Modules/CMakeCCompilerABI.c C$:/mingw64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in C$:/mingw64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp C$:/mingw64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeDetermineRCCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeNinjaFindMake.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeRCCompiler.cmake.in C$:/mingw64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeSystem.cmake.in C$:/mingw64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake C$:/mingw64/share/cmake-3.28/Modules/CMakeTestRCCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang-C.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang-FindBinUtils.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Clang.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Clang-C.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Clang-CXX.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Clang.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Determine-CXX.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/mingw64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.28.2/CMakeCCompiler.cmake CMakeFiles/3.28.2/CMakeCXXCompiler.cmake CMakeFiles/3.28.2/CMakeRCCompiler.cmake CMakeFiles/3.28.2/CMakeSystem.cmake G$:/Grzegorz$ Dombrowski/Git$ Projects/eMGine/CMakeLists.txt: phony
 
 
 #############################################

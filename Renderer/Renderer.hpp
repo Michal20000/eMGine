@@ -1,9 +1,10 @@
 #pragma once
-// FIXME: !!!
-#include "EntityEngine/EntityEngine.hpp"
-#include <gl3w.h>
+#include "RendererUtilities.hpp"
 
-
+class EntityEngine;
+class Window;
+class Shader;
+class Drawable;
 
 class Renderer
 {
@@ -13,14 +14,30 @@ class Renderer
 	Renderer(Application& application);
 	~Renderer();
 
+	static void OnFrame(EntityEngine& ee, float delta_time);
+
 	Application& GetApplication();
-	void Pipeline();
-	// void SetShader(Shader& shader);
+	uint32_t Pipeline();
+	void SetShader(Shader& shader);
+	//void SetActiveCamera(Camera& camera);
+	//Camera& GetActiveCamera();
 
 	private:
 	Application& m_Application;
-	// Shader* m_shader;
-	uint32_t m_pipeline;
-	// void m_DrawObject(MeshData& mesh_data);
+	Window& m_Window;
+	Shader* m_Shader;
+	uint32_t m_Pipeline;
+	//Camera m_ActiveCamera;
+	void CreatePipeline();
+	void DestroyPipeline();
+	void DrawObject(Drawable& drawable);
 
 };
+
+/*
+
+╔══════════════════════════════════════╗
+║ Created by Grzegorz Dombrowski, 2024 ║
+╚══════════════════════════════════════╝
+
+*/

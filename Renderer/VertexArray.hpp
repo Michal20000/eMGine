@@ -1,21 +1,20 @@
 #pragma once
-#include <cstdint>
+#include <glmtypes.hpp>
 #include "RendererUtilities.hpp"
-#include "Dependencies/GL3W/include/gl3w.h"
 
 class VertexArray
 {
     public:
 	VertexArray();
 	~VertexArray();
+	uint32_t ID();
 	uint32_t PositionBuffer();
 	uint32_t NormalBuffer();
 	uint32_t ColorBuffer();
 	uint32_t IndexBuffer();
-	void FillVertexBuffers(glm::vec3 positions[], glm::vec3 normals[], glm::vec3 colors[]);
-	void FillIndexBuffer(uint32_t indices[]);
-	size_t VertexCount;
-	size_t IndexCount;
+	void FillVertexBuffers(size_t vertex_count, glm::vec3 positions[], glm::vec3 normals[], glm::vec3 colors[]);
+	void FillIndexBuffer(size_t index_count, uint32_t indices[]);
+	//TODO change of glm::vec3
 
 	private:
 	uint32_t m_id;
@@ -25,3 +24,11 @@ class VertexArray
 	uint32_t m_IndexBuffer;
 
 };
+
+/*
+
+╔══════════════════════════════════════╗
+║ Created by Grzegorz Dombrowski, 2024 ║
+╚══════════════════════════════════════╝
+
+*/

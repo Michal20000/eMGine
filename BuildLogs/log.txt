@@ -1,0 +1,123 @@
+[1/16] Building CXX object CMakeFiles/application_debug.dir/Renderer/Mesh.cpp.obj
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:14:22: warning: sizeof on array function parameter will return size of 'glm::vec3 *' (aka 'vec<3, float, defaultp> *') instead of 'glm::vec3[]' (aka 'vec<3, float, defaultp>[]') [-Wsizeof-array-argument]
+   14 |         VertexCount = sizeof(positions)/sizeof(positions[0]);
+      |                             ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:6:38: note: declared here
+    6 | void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], uint32_t indices[])
+      |                                      ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:14:33: warning: 'sizeof (positions)' will return the size of the pointer, not the array itself [-Wsizeof-pointer-div]
+   14 |         VertexCount = sizeof(positions)/sizeof(positions[0]);
+      |                       ~~~~~~~~~~~~~~~~~^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:6:38: note: pointer 'positions' declared here
+    6 | void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], uint32_t indices[])
+      |                                      ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:15:21: warning: sizeof on array function parameter will return size of 'uint32_t *' (aka 'unsigned int *') instead of 'uint32_t[]' (aka 'unsigned int[]') [-Wsizeof-array-argument]
+   15 |         IndexCount = sizeof(indices)/sizeof(indices[0]);
+      |                            ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:6:81: note: declared here
+    6 | void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], uint32_t indices[])
+      |                                                                                 ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:15:30: warning: 'sizeof (indices)' will return the size of the pointer, not the array itself [-Wsizeof-pointer-div]
+   15 |         IndexCount = sizeof(indices)/sizeof(indices[0]);
+      |                      ~~~~~~~~~~~~~~~^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:6:81: note: pointer 'indices' declared here
+    6 | void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], uint32_t indices[])
+      |                                                                                 ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:30:22: warning: sizeof on array function parameter will return size of 'glm::vec3 *' (aka 'vec<3, float, defaultp> *') instead of 'glm::vec3[]' (aka 'vec<3, float, defaultp>[]') [-Wsizeof-array-argument]
+   30 |         VertexCount = sizeof(positions)/sizeof(positions[0]);
+      |                             ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:22:38: note: declared here
+   22 | void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], glm::vec3 colors[], uint32_t indices[])
+      |                                      ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:30:33: warning: 'sizeof (positions)' will return the size of the pointer, not the array itself [-Wsizeof-pointer-div]
+   30 |         VertexCount = sizeof(positions)/sizeof(positions[0]);
+      |                       ~~~~~~~~~~~~~~~~~^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:22:38: note: pointer 'positions' declared here
+   22 | void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], glm::vec3 colors[], uint32_t indices[])
+      |                                      ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:31:21: warning: sizeof on array function parameter will return size of 'uint32_t *' (aka 'unsigned int *') instead of 'uint32_t[]' (aka 'unsigned int[]') [-Wsizeof-array-argument]
+   31 |         IndexCount = sizeof(indices)/sizeof(indices[0]);
+      |                            ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:22:101: note: declared here
+   22 | void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], glm::vec3 colors[], uint32_t indices[])
+      |                                                                                                     ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:31:30: warning: 'sizeof (indices)' will return the size of the pointer, not the array itself [-Wsizeof-pointer-div]
+   31 |         IndexCount = sizeof(indices)/sizeof(indices[0]);
+      |                      ~~~~~~~~~~~~~~~^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:22:101: note: pointer 'indices' declared here
+   22 | void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], glm::vec3 colors[], uint32_t indices[])
+      |                                                                                                     ^
+8 warnings generated.
+[2/16] Building CXX object CMakeFiles/application_debug.dir/Renderer/Drawable.cpp.obj
+[3/16] Building CXX object CMakeFiles/application_release.dir/Renderer/Drawable.cpp.obj
+[4/16] Building CXX object CMakeFiles/application_release.dir/Renderer/Mesh.cpp.obj
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:14:22: warning: sizeof on array function parameter will return size of 'glm::vec3 *' (aka 'vec<3, float, defaultp> *') instead of 'glm::vec3[]' (aka 'vec<3, float, defaultp>[]') [-Wsizeof-array-argument]
+   14 |         VertexCount = sizeof(positions)/sizeof(positions[0]);
+      |                             ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:6:38: note: declared here
+    6 | void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], uint32_t indices[])
+      |                                      ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:14:33: warning: 'sizeof (positions)' will return the size of the pointer, not the array itself [-Wsizeof-pointer-div]
+   14 |         VertexCount = sizeof(positions)/sizeof(positions[0]);
+      |                       ~~~~~~~~~~~~~~~~~^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:6:38: note: pointer 'positions' declared here
+    6 | void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], uint32_t indices[])
+      |                                      ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:15:21: warning: sizeof on array function parameter will return size of 'uint32_t *' (aka 'unsigned int *') instead of 'uint32_t[]' (aka 'unsigned int[]') [-Wsizeof-array-argument]
+   15 |         IndexCount = sizeof(indices)/sizeof(indices[0]);
+      |                            ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:6:81: note: declared here
+    6 | void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], uint32_t indices[])
+      |                                                                                 ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:15:30: warning: 'sizeof (indices)' will return the size of the pointer, not the array itself [-Wsizeof-pointer-div]
+   15 |         IndexCount = sizeof(indices)/sizeof(indices[0]);
+      |                      ~~~~~~~~~~~~~~~^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:6:81: note: pointer 'indices' declared here
+    6 | void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], uint32_t indices[])
+      |                                                                                 ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:30:22: warning: sizeof on array function parameter will return size of 'glm::vec3 *' (aka 'vec<3, float, defaultp> *') instead of 'glm::vec3[]' (aka 'vec<3, float, defaultp>[]') [-Wsizeof-array-argument]
+   30 |         VertexCount = sizeof(positions)/sizeof(positions[0]);
+      |                             ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:22:38: note: declared here
+   22 | void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], glm::vec3 colors[], uint32_t indices[])
+      |                                      ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:30:33: warning: 'sizeof (positions)' will return the size of the pointer, not the array itself [-Wsizeof-pointer-div]
+   30 |         VertexCount = sizeof(positions)/sizeof(positions[0]);
+      |                       ~~~~~~~~~~~~~~~~~^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:22:38: note: pointer 'positions' declared here
+   22 | void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], glm::vec3 colors[], uint32_t indices[])
+      |                                      ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:31:21: warning: sizeof on array function parameter will return size of 'uint32_t *' (aka 'unsigned int *') instead of 'uint32_t[]' (aka 'unsigned int[]') [-Wsizeof-array-argument]
+   31 |         IndexCount = sizeof(indices)/sizeof(indices[0]);
+      |                            ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:22:101: note: declared here
+   22 | void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], glm::vec3 colors[], uint32_t indices[])
+      |                                                                                                     ^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:31:30: warning: 'sizeof (indices)' will return the size of the pointer, not the array itself [-Wsizeof-pointer-div]
+   31 |         IndexCount = sizeof(indices)/sizeof(indices[0]);
+      |                      ~~~~~~~~~~~~~~~^
+G:/Grzegorz Dombrowski/Git Projects/eMGine/Renderer/Mesh.cpp:22:101: note: pointer 'indices' declared here
+   22 | void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], glm::vec3 colors[], uint32_t indices[])
+      |                                                                                                     ^
+8 warnings generated.
+[5/16] Building CXX object CMakeFiles/application_debug.dir/Renderer/BasicShapes.cpp.obj
+[6/16] Building CXX object CMakeFiles/application_release.dir/Renderer/BasicShapes.cpp.obj
+[7/16] Building CXX object CMakeFiles/application_release.dir/Renderer/VertexArray.cpp.obj
+[8/16] Building CXX object CMakeFiles/application_debug.dir/Renderer/VertexArray.cpp.obj
+[9/16] Building CXX object CMakeFiles/application_release.dir/Renderer/Shader.cpp.obj
+[10/16] Building CXX object CMakeFiles/application_debug.dir/Renderer/Shader.cpp.obj
+[11/16] Building CXX object CMakeFiles/application_release.dir/Renderer/Renderer.cpp.obj
+[12/16] Building CXX object CMakeFiles/application_debug.dir/Renderer/Renderer.cpp.obj
+[13/16] Building CXX object CMakeFiles/application_release.dir/Application.cpp.obj
+[14/16] Building CXX object CMakeFiles/application_debug.dir/Application.cpp.obj
+[15/16] Linking CXX executable "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.exe"
+FAILED: G:/Grzegorz Dombrowski/Git Projects/eMGine/Binaries/Debug/application_debug.exe 
+C:\WINDOWS\system32\cmd.exe /C "cd . && C:\mingw64\bin\clang++.exe   CMakeFiles/application_debug.dir/Application.cpp.obj CMakeFiles/application_debug.dir/Errors.cpp.obj CMakeFiles/application_debug.dir/Main.cpp.obj CMakeFiles/application_debug.dir/Memory.cpp.obj CMakeFiles/application_debug.dir/Window.cpp.obj CMakeFiles/application_debug.dir/EntityEngine/EntityContainer.cpp.obj CMakeFiles/application_debug.dir/EntityEngine/EntityEngine.cpp.obj CMakeFiles/application_debug.dir/EntityEngine/EntityTable.cpp.obj CMakeFiles/application_debug.dir/EntityEngine/EntityView.cpp.obj CMakeFiles/application_debug.dir/Renderer/BasicShapes.cpp.obj CMakeFiles/application_debug.dir/Renderer/Drawable.cpp.obj CMakeFiles/application_debug.dir/Renderer/Mesh.cpp.obj CMakeFiles/application_debug.dir/Renderer/Renderer.cpp.obj CMakeFiles/application_debug.dir/Renderer/Shader.cpp.obj CMakeFiles/application_debug.dir/Renderer/VertexArray.cpp.obj CMakeFiles/application_debug.dir/Utilities/Keyboard.cpp.obj CMakeFiles/application_debug.dir/Utilities/Mouse.cpp.obj CMakeFiles/application_debug.dir/Utilities/Time.cpp.obj CMakeFiles/application_debug.dir/Utilities/Math/Math.cpp.obj CMakeFiles/application_debug.dir/Dependencies/GL3W/gl3w.cpp.obj -o "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Debug\application_debug.exe" -Wl,--out-implib,libapplication_debug.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -L"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW" -lglfw3  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+C:/mingw64/bin/ld: CMakeFiles/application_debug.dir/Application.cpp.obj:Application.cpp:(.text$_ZN11BasicShapes15CreateCubeEvent7OnEventER12EntityEngineRS0_[_ZN11BasicShapes15CreateCubeEvent7OnEventER12EntityEngineRS0_]+0xc1): undefined reference to `Mesh::Mesh()'
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+[16/16] Linking CXX executable "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.exe"
+FAILED: G:/Grzegorz Dombrowski/Git Projects/eMGine/Binaries/Release/application_release.exe 
+C:\WINDOWS\system32\cmd.exe /C "cd . && C:\mingw64\bin\clang++.exe   CMakeFiles/application_release.dir/Application.cpp.obj CMakeFiles/application_release.dir/Errors.cpp.obj CMakeFiles/application_release.dir/Main.cpp.obj CMakeFiles/application_release.dir/Memory.cpp.obj CMakeFiles/application_release.dir/Window.cpp.obj CMakeFiles/application_release.dir/EntityEngine/EntityContainer.cpp.obj CMakeFiles/application_release.dir/EntityEngine/EntityEngine.cpp.obj CMakeFiles/application_release.dir/EntityEngine/EntityTable.cpp.obj CMakeFiles/application_release.dir/EntityEngine/EntityView.cpp.obj CMakeFiles/application_release.dir/Renderer/BasicShapes.cpp.obj CMakeFiles/application_release.dir/Renderer/Drawable.cpp.obj CMakeFiles/application_release.dir/Renderer/Mesh.cpp.obj CMakeFiles/application_release.dir/Renderer/Renderer.cpp.obj CMakeFiles/application_release.dir/Renderer/Shader.cpp.obj CMakeFiles/application_release.dir/Renderer/VertexArray.cpp.obj CMakeFiles/application_release.dir/Utilities/Keyboard.cpp.obj CMakeFiles/application_release.dir/Utilities/Mouse.cpp.obj CMakeFiles/application_release.dir/Utilities/Time.cpp.obj CMakeFiles/application_release.dir/Utilities/Math/Math.cpp.obj CMakeFiles/application_release.dir/Dependencies/GL3W/gl3w.cpp.obj -o "G:\Grzegorz Dombrowski\Git Projects\eMGine\Binaries\Release\application_release.exe" -Wl,--out-implib,libapplication_release.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -L"G:/Grzegorz Dombrowski/Git Projects/eMGine/./Dependencies/GLFW" -lglfw3  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+C:/mingw64/bin/ld: CMakeFiles/application_release.dir/Application.cpp.obj:Application.cpp:(.text$_ZN11BasicShapes15CreateCubeEvent7OnEventER12EntityEngineRS0_[_ZN11BasicShapes15CreateCubeEvent7OnEventER12EntityEngineRS0_]+0xc1): undefined reference to `Mesh::Mesh()'
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.

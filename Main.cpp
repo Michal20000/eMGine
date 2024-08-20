@@ -70,8 +70,6 @@ int32_t main()
 	// { 1, 1 } -> BEING_PRESSED; UP;
 	// { 1, 0 } -> RELEASED; DOWN:
 
-
-
 	Application application = Application();
 	application.Main();
 

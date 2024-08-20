@@ -1,5 +1,11 @@
 #include "Shader.hpp"
-#include <cstdint>
+
+#include <iostream>
+#include <fstream>
+#include <gl3w.h>
+#include <gtc/matrix_transform.hpp>
+#include <gtc/type_ptr.hpp>
+#include "RendererUtilities.hpp"
 
 Shader::Shader(const char* vert_filepath, const char* frag_filepath) :
 	m_VertexShaderPath(vert_filepath),
@@ -7,30 +13,28 @@ Shader::Shader(const char* vert_filepath, const char* frag_filepath) :
 {
 	CompileVertexShader();
 	CompileFragmentShader();
+
 }
 
 Shader::~Shader()
 {
 	GL(glDeleteProgram(m_VertexShader));
 	GL(glDeleteProgram(m_FragmentShader));
+
 }
 
 void Shader::CompileVertexShader()
 {
 	std::string source = LoadShaderSource(m_VertexShaderPath);
 	m_VertexShader = CompileShader(source.c_str(), GL_VERTEX_SHADER, "VS log: ");
+
 }
 
 void Shader::CompileFragmentShader()
 {
 	std::string source = LoadShaderSource(m_FragmentShaderPath);
 	m_FragmentShader = CompileShader(source.c_str(), GL_FRAGMENT_SHADER, "FS log: ");
-}
 
-void Shader::Bind(uint32_t pipeline)
-{
-	GL(glUseProgramStages(pipeline, GL_VERTEX_SHADER_BIT, m_VertexShader));
-	GL(glUseProgramStages(pipeline, GL_FRAGMENT_SHADER_BIT, m_FragmentShader));
 }
 
 std::string Shader::LoadShaderSource(const char* filepath)
@@ -42,6 +46,7 @@ std::string Shader::LoadShaderSource(const char* filepath)
 	shader_str.resize(length);
 	shader_source.read(&shader_str.front(), length);
 	return shader_str;
+
 }
 
 uint32_t Shader::CompileShader(const char* source, GLenum stage, const char* message)
@@ -55,4 +60,26 @@ uint32_t Shader::CompileShader(const char* source, GLenum stage, const char* mes
 	strcat(log_c, message);
 	LOG_WARN(log_c);
 	return shader;
+
 }
+
+void Shader::Bind(uint32_t pipeline)
+{
+	GL(glUseProgramStages(pipeline, GL_VERTEX_SHADER_BIT, m_VertexShader));
+	GL(glUseProgramStages(pipeline, GL_FRAGMENT_SHADER_BIT, m_FragmentShader));
+
+}
+
+void Shader::UploadMVP(glm::mat4 mvp_matrix)
+{
+	GL(glProgramUniformMatrix4fv(m_VertexShader, 0, 1, GL_FALSE, glm::value_ptr(mvp_matrix)));
+
+}
+
+/*
+
+╔══════════════════════════════════════╗
+║ Created by Grzegorz Dombrowski, 2024 ║
+╚══════════════════════════════════════╝
+
+*/

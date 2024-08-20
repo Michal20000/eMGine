@@ -18,6 +18,10 @@ class Application
 	~Application();
 	void Main();
 
+	Window& GetWindow();
+	Renderer& GetRenderer();
+	EntityEngine& GetEntityEngine();
+
 	private:
 	Window* m_Window;
 	Renderer* m_Renderer;

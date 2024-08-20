@@ -4,8 +4,6 @@
 #include "EntityEngine.hpp"
 #include "Time.hpp"
 
-
-
 Application::Application()
 {
 	m_Window = new Window(*this, "eMGine", 1280, 720);
@@ -28,14 +26,21 @@ Application::~Application()
 
 // TODO: delete this shit
 #include <windows.h>
+#include <glm.hpp>
 #include "Keyboard.hpp"
 #include "Mouse.hpp"
-#include <glm.hpp>
+
+#include "Renderer.hpp"
+#include "Renderer/Mesh.hpp"
+#include "Renderer/Shader.hpp"
+#include "Renderer/BasicShapes.hpp"
 // 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 // COLUMN  COLUMN  COLUMN    COLUMN
 
 void Application::Main()
 {
+	EntityEngine& ee = this->GetEntityEngine();
+
 	glm::mat4 test_matrix = {
 		{ 0.0, 1.0, 2.0, 3.0 },
 		{ 0.0, 1.0, 2.0, 3.0 },
@@ -45,6 +50,17 @@ void Application::Main()
 	float* pointer_test_matrix = (float*)&test_matrix;
 	for (uint64_t i = 0; i < 16; ++i)
 		LOG_SILLY(i <<" : "<< *(pointer_test_matrix + i));
+
+	;
+
+	Shader* shader_d = new Shader("Resources/default_vert.glsl", "Resources/default_frag.glsl");
+
+	EntityEngine::Register<Renderer>();
+	
+	ee.Dispatch<BasicShapes::CreateCubeEvent>();
+	ee.OnEvent();
+
+	float delta_time = 0.0f;
 
 	while (m_Window->IsRunning()) {
 		// TODO: dt calculations...
@@ -70,7 +86,6 @@ void Application::Main()
 		if (Mouse::HasEntered()) LOG_FL_SILLY("has_entered");
 		if (Mouse::HasLeft()) LOG_FL_SILLY("has_left");
 
-		m_Window->Refresh();
 
 		// if (Keyboard::IsPressed(KEY_A) && Keyboard::Duration(KEY_A) == 0.0F) LOG("A Press");
 		// if (Keyboard::IsReleased(KEY_A) && Keyboard::Duration(KEY_A) == 0.0F) LOG("A Release");
@@ -86,16 +101,24 @@ void Application::Main()
 
 		// TODO: Keyboard::Character('a');
 		// TODO: Keyboard::IsCharacter();
-		Sleep(10);
-		// TODO: global_events Like change_level
 
+		m_EntityEngine->OnFrame(delta_time);
+
+		Sleep(10);
+
+		// TODO: global_events Like change_level
+		
 		uint64_t after = Time::Now();
-		float delta_time = Time::Duration(before, after);
+		delta_time = Time::Duration(before, after);
 		// TODO: Delete!
 		// TODO: Dt calculations...
 		// LOG_SILLY("Duration " << duration << "s");
 
+		m_Window->Refresh();
+
 	}
+
+	delete shader_d;
 
 }
 // {
@@ -127,3 +150,19 @@ void Application::Main()
 // 	// 
 
 // }
+
+Window& Application::GetWindow()
+{
+	return *m_Window;
+
+}
+Renderer& Application::GetRenderer()
+{
+	return *m_Renderer;
+
+}
+EntityEngine& Application::GetEntityEngine()
+{
+	return *m_EntityEngine;
+
+}
