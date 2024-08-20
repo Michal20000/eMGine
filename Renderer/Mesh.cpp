@@ -7,7 +7,6 @@ void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[])
 	{
 		LOG_ERROR("Invalid mesh data to import");
 		return;
-
 	}
 	
 	vertexArray.FillVertexBuffers(positions, normals, nullptr);
@@ -20,7 +19,6 @@ void Mesh::LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], glm::vec3
 	{
 		LOG_ERROR("Invalid mesh data to import");
 		return;
-
 	}
 
 	vertexArray.FillVertexBuffers(positions, normals, colors);
