@@ -12,8 +12,8 @@ class Mesh
 	size_t VertexCount;
     size_t IndexCount;
 
-	void LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], uint32_t indices[]);
-	void LoadFromProgram(glm::vec3 positions[], glm::vec3 normals[], glm::vec3 colors[], uint32_t indices[]);
+	void LoadFromProgram(size_t vertex_count, glm::vec3 positions[], glm::vec3 normals[], size_t index_count, uint32_t indices[]);
+	void LoadFromProgram(size_t vertex_count, glm::vec3 positions[], glm::vec3 normals[], glm::vec3 colors[], size_t index_count, uint32_t indices[]);
 	//void LoadFromFile(); //TODO assimp
 	VertexArray& GetVertexArray();
 

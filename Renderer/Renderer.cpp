@@ -95,9 +95,9 @@ void Renderer::DrawObject(Drawable& drawable)
 
 	Mesh& mesh = drawable.GetMesh();
 	VertexArray& vertex_array = mesh.GetVertexArray();
-	glBindVertexArray(vertex_array.ID());
+	GL(glBindVertexArray(vertex_array.ID()));
 	//glBindTextureUnit(unit, texture);
-	glDrawElements(GL_TRIANGLES, mesh.IndexCount, GL_UNSIGNED_INT, nullptr);
+	GL(glDrawElements(GL_TRIANGLES, mesh.IndexCount, GL_UNSIGNED_INT, nullptr));
 
 }
 
