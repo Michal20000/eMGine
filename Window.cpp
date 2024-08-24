@@ -71,7 +71,7 @@ m_Height(height)
 
 	GLFW(m_Display = glfwGetPrimaryMonitor());
 	// TODO: no display
-	GLFW(m_Window = glfwCreateWindow(m_Width, m_Height, title, m_Display, nullptr));
+	GLFW(m_Window = glfwCreateWindow(m_Width, m_Height, title, nullptr, nullptr));
 	THROW(m_Window == nullptr, GLFWError, "Window should be Created");
 	GLFW(glfwMakeContextCurrent(m_Window));
 	LOG_WARN("Window is Created"); // TODO: delete

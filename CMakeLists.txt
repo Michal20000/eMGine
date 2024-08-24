@@ -69,8 +69,11 @@ target_include_directories(application_debug PRIVATE "./Utilities/Math")
 target_include_directories(application_debug PRIVATE "./Dependencies/GLFW/include")
 target_include_directories(application_debug PRIVATE "./Dependencies/GL3W/include")
 target_include_directories(application_debug PRIVATE "./Dependencies/GLM")
+target_include_directories(application_debug PRIVATE "./Dependencies/assimp/include")
 target_link_directories(application_debug PRIVATE "./Dependencies/GLFW")
 target_link_libraries(application_debug PRIVATE "glfw3")
+target_link_directories(application_debug PRIVATE "./Dependencies/assimp")
+target_link_libraries(application_debug PRIVATE "assimp")
 
 
 
@@ -90,3 +93,5 @@ target_include_directories(application_release PRIVATE "./Dependencies/GL3W/incl
 target_include_directories(application_release PRIVATE "./Dependencies/GLM")
 target_link_directories(application_release PRIVATE "./Dependencies/GLFW")
 target_link_libraries(application_release PRIVATE "glfw3")
+target_link_directories(application_release PRIVATE "./Dependencies/assimp")
+target_link_libraries(application_release PRIVATE "assimp")
