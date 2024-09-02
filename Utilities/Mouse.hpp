@@ -1,5 +1,5 @@
 #pragma once
-#include "Math/Vector2F.hpp"
+#include "Vector2F.hpp"
 #include <cstdint>
 
 

@@ -40,25 +40,25 @@ void Shader::CompileFragmentShader()
 std::string Shader::LoadShaderSource(const char* filepath)
 {
 	std::ifstream shader_source(filepath, std::ios::ate | std::ios::in);
+	shader_source.seekg(0, std::ios_base::end);
 	const size_t length = shader_source.tellg();
-	shader_source.seekg(0);
+	shader_source.seekg(0, std::ios_base::beg);
 	std::string shader_str;
-	shader_str.resize(length);
+	shader_str.resize(length + 1);
 	shader_source.read(&shader_str.front(), length);
+	shader_source.close();
 	return shader_str;
 
 }
 
 uint32_t Shader::CompileShader(const char* source, GLenum stage, const char* message)
 {
-	uint32_t shader = GL(glCreateShaderProgramv(stage, 1, &source));
+	GL(uint32_t shader = glCreateShaderProgramv(stage, 1, &source));
 	std::string log;
 	log.resize(1024);
 	GL(glGetProgramInfoLog(shader, log.size(), nullptr, &log.front()));
-	char* log_c;
-	strcpy(log_c, log.c_str());
-	strcat(log_c, message);
-	LOG_WARN(log_c);
+	log = std::string(message).append(" ").append(log);
+	LOG_WARN(log.c_str());
 	return shader;
 
 }

@@ -4,3 +4,53 @@ Poprawa pliku CMake;
 Folder do przechowywania kontenerow;
 .Builds i .Binaries powinny dzialac troche inaczej;
 Pliki *.bat do tworzenia *.exe...;
+
+
+
+info: wizja dla API graficznego
+# GL.hp
+info: plik implementacji w języku C++ ma prawo do wywoływania natywnych funkonalności
+info: tego API
+
+# VK.hp
+info: plik implementacji w języku C++ ma prawo do wywoływania natywnych funkonalności
+info: tego API
+
+# Renderer.hp
+info: klasa ogranicza się do posiadania szeregu funkcji wymienionych w pliku...
+info: ...RendererController.hp
+info: te funkcje to wywołania pewnych wskaźników na funkcje API
+info: renderer.API<GL>(); renderer.API<VK>(); ...tak zmieniamy API;
+# Renderer.hp.Functions
+info: mogą korzystać ze statycznych klas jak Kamera
+function: renderer.Clear();
+info: faza z GBuffer
+info: napisz na FB... pewnie o pewnych rzeczach zapomniałem...
+function: renderer.GDraw(Transform.cframe Drawable.drawable);
+function: renderer.GDraw(Transform.cframe LightBuffer.light_buffer);
+function: renderer.GDraw();
+info: faza po GBuffer
+info: pewnie funkcje do 
+function: renderer.FDraw(Transform.cframe Transparent.transparent);
+function: renderer.FDraw(AfterEffects.after_effects);
+info: GDraw to rysowanie do GeomtryBuffer to znaczy GBuffer
+info: FDraw to rysowanie do FrameBuffer
+
+# RendererController.hp
+info: system ECS, który iteruje po pewnych kombinacjach fragmentów
+info: np. [Vector3F Drawable] [Vector3F LightBuffer] i wywołuje dla nich
+info: funkcje z klasy Renderer np. do czyszczenia ekranu, 
+info: rysowanie danych Drawable, rysowanie świateł, rysowanie GBuffera, post-processing
+info: na razie nie trzeba tym się przejmować
+
+
+
+# Drawable.hp
+
+# Transparent.hp
+
+# LightBuffer.hp
+
+# Camera.hp
+
+# AfterEffects.hp

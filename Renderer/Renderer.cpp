@@ -15,6 +15,18 @@ Renderer::Renderer(Application& application) :
 	m_Application(application),
 	m_Window(application.GetWindow())
 {
+	if (gl3wInit())
+		LOG_WARN("OpenGL failed to initialise");
+	else
+	{
+		LOG_WARN("OpenGL initialised");
+		LOG_WARN(glGetString(GL_VERSION));
+		LOG_WARN(glGetString(GL_SHADING_LANGUAGE_VERSION));
+	}
+
+	if (!gl3wIsSupported(4, 6))
+		LOG_WARN("OpenGL version 4.6 not supported");
+
 	CreatePipeline();
 
 }

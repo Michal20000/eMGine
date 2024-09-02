@@ -14,6 +14,7 @@ Application::Application()
 	// TODO: EntityEngine::Register<...>();
 
 }
+
 Application::~Application()
 {
 	delete m_Window;
@@ -30,7 +31,6 @@ Application::~Application()
 #include "Keyboard.hpp"
 #include "Mouse.hpp"
 
-#include "Renderer.hpp"
 #include "Renderer/Mesh.hpp"
 #include "Renderer/Shader.hpp"
 #include "Renderer/BasicShapes.hpp"
@@ -73,18 +73,18 @@ void Application::Main()
 		// TODO: m_Window.OnFrame();
 		// TODO: m_EntityEngine.OnPeriodic();
 		// TODO: m_EntityEngine.OnFrame();
-		if (Mouse::IsPressed(LEFT_MOUSE_BUTTON) && Mouse::Duration(LEFT_MOUSE_BUTTON) == 0.0F) m_Window->DisableCursor();
-		if (Mouse::IsReleased(LEFT_MOUSE_BUTTON) && Mouse::Duration(LEFT_MOUSE_BUTTON) == 0.0F) m_Window->EnableCursor();
+		// if (Mouse::IsPressed(LEFT_MOUSE_BUTTON) && Mouse::Duration(LEFT_MOUSE_BUTTON) == 0.0F) m_Window->DisableCursor();
+		// if (Mouse::IsReleased(LEFT_MOUSE_BUTTON) && Mouse::Duration(LEFT_MOUSE_BUTTON) == 0.0F) m_Window->EnableCursor();
 
-		Vector2F location =  Mouse::Location();
-		Vector2F motion = Mouse::Motion();
-		if (Mouse::IsPressed(RIGHT_MOUSE_BUTTON)) {
-			LOG_SILLY("Location is " << location.X << " " << location.Y);
-			LOG_SILLY("Motion is " << motion.X << " " << motion.Y);
-		}
+		// Vector2F location =  Mouse::Location();
+		// Vector2F motion = Mouse::Motion();
+		// if (Mouse::IsPressed(RIGHT_MOUSE_BUTTON)) {
+		// 	LOG_SILLY("Location is " << location.X << " " << location.Y);
+		// 	LOG_SILLY("Motion is " << motion.X << " " << motion.Y);
+		// }
 
-		if (Mouse::HasEntered()) LOG_FL_SILLY("has_entered");
-		if (Mouse::HasLeft()) LOG_FL_SILLY("has_left");
+		// if (Mouse::HasEntered()) LOG_FL_SILLY("has_entered");
+		// if (Mouse::HasLeft()) LOG_FL_SILLY("has_left");
 
 
 		// if (Keyboard::IsPressed(KEY_A) && Keyboard::Duration(KEY_A) == 0.0F) LOG("A Press");
@@ -104,7 +104,7 @@ void Application::Main()
 
 		m_EntityEngine->OnFrame(delta_time);
 
-		Sleep(10);
+		// Sleep(10);
 
 		// TODO: global_events Like change_level
 		
@@ -121,6 +121,7 @@ void Application::Main()
 	delete shader_d;
 
 }
+
 // {
 // 	while (true) {
 // 		// dt = 0.0F;
@@ -156,11 +157,13 @@ Window& Application::GetWindow()
 	return *m_Window;
 
 }
+
 Renderer& Application::GetRenderer()
 {
 	return *m_Renderer;
 
 }
+
 EntityEngine& Application::GetEntityEngine()
 {
 	return *m_EntityEngine;
