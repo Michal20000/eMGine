@@ -13,7 +13,6 @@ out gl_PerVertex
 
 void main()
 {
-	//vertexColor = inColor;
 	outColor = inColor;
 	gl_Position = mvpMatrix * vec4(inPosition, 1.0);
 }

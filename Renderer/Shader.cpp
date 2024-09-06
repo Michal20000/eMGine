@@ -9,17 +9,26 @@
 
 Shader::Shader(const char* vert_filepath, const char* frag_filepath) :
 	m_VertexShaderPath(vert_filepath),
-	m_FragmentShaderPath(frag_filepath)
+	m_FragmentShaderPath(frag_filepath),
+	m_MVPMatrixLocation(0)
 {
 	CompileVertexShader();
 	CompileFragmentShader();
-
+	//GL(m_MVPMatrixLocation = glGetUniformLocation(m_VertexShader, "mvpMatrix"));
 }
 
 Shader::~Shader()
 {
 	GL(glDeleteProgram(m_VertexShader));
 	GL(glDeleteProgram(m_FragmentShader));
+
+}
+
+bool operator==(const Shader& lob, const Shader& rob)
+{
+	return (lob.m_VertexShader == rob.m_VertexShader &&
+			lob.m_FragmentShader == rob.m_FragmentShader)
+			? true : false;
 
 }
 
@@ -70,9 +79,10 @@ void Shader::Bind(uint32_t pipeline)
 
 }
 
-void Shader::UploadMVP(glm::mat4 mvp_matrix)
+void Shader::UploadMVP(glm::mat4& mvp_matrix)
 {
-	GL(glProgramUniformMatrix4fv(m_VertexShader, 0, 1, GL_FALSE, glm::value_ptr(mvp_matrix)));
+	GL(glProgramUniformMatrix4fv(m_VertexShader, m_MVPMatrixLocation, 1, GL_FALSE, glm::value_ptr(mvp_matrix)));
+	LOG_SILLY("MVP matrix uploaded");
 
 }
 

@@ -12,6 +12,7 @@ class Shader
 	Shader(const Shader& ob) = delete;
 	Shader(Shader&& ob) = delete;
 	~Shader();
+	friend bool operator==(const Shader& lob, const Shader& rob);
 	friend class Renderer;
 
 	void SetVertexShaderPath(const char* filepath);
@@ -24,10 +25,11 @@ class Shader
 	const char* m_FragmentShaderPath;
 	uint32_t m_VertexShader;
 	uint32_t m_FragmentShader;
+	int32_t m_MVPMatrixLocation;
 	std::string LoadShaderSource(const char* filepath);
 	uint32_t CompileShader(const char* source, GLenum stage, const char* message);
 	void Bind(uint32_t pipeline);
-	void UploadMVP(glm::mat4 mvp_matrix);
+	void UploadMVP(glm::mat4& mvp_matrix);
 
 };
 

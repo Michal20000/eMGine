@@ -7,6 +7,7 @@ class Mesh
 {
 	public:
 	Mesh();
+	~Mesh();
 
     //uint32_t texture;
 	size_t VertexCount;

@@ -3,6 +3,9 @@
 Mesh::Mesh()
 {}
 
+Mesh::~Mesh()
+{}
+
 void Mesh::LoadFromProgram(
 	size_t vertex_count,
 	glm::vec3 positions[],

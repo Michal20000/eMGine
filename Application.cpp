@@ -12,6 +12,8 @@ Application::Application()
 
 	// TODO: configurations...
 	// TODO: EntityEngine::Register<...>();
+	EntityEngine::Register<Renderer>();
+	EntityEngine::Register<Drawable>();
 
 }
 
@@ -41,24 +43,119 @@ void Application::Main()
 {
 	EntityEngine& ee = this->GetEntityEngine();
 
-	glm::mat4 test_matrix = {
-		{ 0.0, 1.0, 2.0, 3.0 },
-		{ 0.0, 1.0, 2.0, 3.0 },
-		{ 0.0, 1.0, 2.0, 3.0 },
-		{ 0.0, 1.0, 2.0, 3.0 }
-	};
-	float* pointer_test_matrix = (float*)&test_matrix;
-	for (uint64_t i = 0; i < 16; ++i)
-		LOG_SILLY(i <<" : "<< *(pointer_test_matrix + i));
+	// glm::mat4 test_matrix = {
+	// 	{ 0.0, 1.0, 2.0, 3.0 },
+	// 	{ 0.0, 1.0, 2.0, 3.0 },
+	// 	{ 0.0, 1.0, 2.0, 3.0 },
+	// 	{ 0.0, 1.0, 2.0, 3.0 }
+	// };
+	// float* pointer_test_matrix = (float*)&test_matrix;
+	// for (uint64_t i = 0; i < 16; ++i)
+	// 	LOG_SILLY(i <<" : "<< *(pointer_test_matrix + i));
 
-	;
-
-	Shader* shader_d = new Shader("Resources/default_vert.glsl", "Resources/default_frag.glsl");
-
-	EntityEngine::Register<Renderer>();
+	Shader shader_d("Resources/default_vert.glsl", "Resources/default_frag.glsl");
+	m_Renderer->SetShader(shader_d);
 	
-	ee.Dispatch<BasicShapes::CreateCubeEvent>();
-	ee.OnEvent();
+	//ee.Dispatch<BasicShapes::CreateCubeEvent>();
+	//ee.OnEvent();
+
+	//DELETE LATER {
+	glm::vec3 positions[]
+	{
+		{-0.5f, -0.5f, -0.5f},
+		{0.5f, -0.5f, -0.5f},
+		{0.5f, 0.5f, -0.5f},
+		{-0.5f, 0.5f, -0.5f},
+		{0.5f, -0.5f, 0.5f},
+		{-0.5f, -0.5f, 0.5f},
+		{-0.5f, 0.5f, 0.5f},
+		{0.5f, 0.5f, 0.5f},
+		{-0.5f, -0.5f, 0.5f},
+		{0.5f, -0.5f, 0.5f},
+		{0.5f, -0.5f, -0.5f},
+		{-0.5f, -0.5f, -0.5f},
+		{-0.5f, 0.5f, -0.5f},
+		{0.5f, 0.5f, -0.5f},
+		{0.5f, 0.5f, 0.5f},
+		{-0.5f, 0.5f, 0.5f},
+		{-0.5f, -0.5f, 0.5f},
+		{-0.5f, -0.5f, -0.5f},
+		{-0.5f, 0.5f, -0.5f},
+		{-0.5f, 0.5f, 0.5f},
+		{0.5f, -0.5f, -0.5f},
+		{0.5f, -0.5f, 0.5f}, 
+		{0.5f, 0.5f, 0.5f}, 
+		{0.5f, 0.5f, -0.5f}, 
+	};
+
+	glm::vec3 normals[]
+	{
+		{0.f, 0.f, -1.f},
+		{0.f, 0.f, -1.f},
+		{0.f, 0.f, -1.f},
+		{0.f, 0.f, -1.f},
+		{0.f, 0.f, 1.f},
+		{0.f, 0.f, 1.f},
+		{0.f, 0.f, 1.f},
+		{0.f, 0.f, 1.f},
+		{0.f, 1.f, 0.f},
+		{0.f, 1.f, 0.f},
+		{0.f, 1.f, 0.f},
+		{0.f, 1.f, 0.f},
+		{0.f, -1.f, 0.f},
+		{0.f, -1.f, 0.f},
+		{0.f, -1.f, 0.f},
+		{0.f, -1.f, 0.f},
+		{1.f, 0.f, 0.f},
+		{1.f, 0.f, 0.f},
+		{1.f, 0.f, 0.f},
+		{1.f, 0.f, 0.f},
+		{-1.f, 0.f, 0.f},
+		{-1.f, 0.f, 0.f},
+		{-1.f, 0.f, 0.f},
+		{-1.f, 0.f, 0.f},
+	};
+
+	glm::vec3 colors[]
+	{
+		{1.0f, 0.5f, 0.0f},
+		{0.0f, 1.0f, 0.5f},
+		{0.5f, 0.0f, 1.0f},
+		{1.0f, 0.0f, 0.5f},
+		{0.5f, 1.0f, 0.0f},
+		{0.0f, 0.5f, 1.0f},
+		{1.0f, 0.5f, 0.0f},
+		{0.0f, 1.0f, 0.5f},
+		{0.5f, 0.0f, 1.0f},
+		{1.0f, 0.0f, 0.5f},
+		{0.5f, 1.0f, 0.0f},
+		{0.0f, 0.5f, 1.0f},
+		{1.0f, 0.5f, 0.0f},
+		{0.0f, 1.0f, 0.5f},
+		{0.5f, 0.0f, 1.0f},
+		{1.0f, 0.0f, 0.5f},
+		{0.5f, 1.0f, 0.0f},
+		{0.0f, 0.5f, 1.0f},
+	};
+
+	uint32_t indices[]
+	{
+		0, 1, 2, 3,
+		4, 5, 6, 7,
+		8, 9, 10, 11,
+		12, 13, 14, 15,
+		16, 17, 18, 19,
+		20, 21, 22, 23,
+	};
+
+	Mesh cube_mesh;
+	cube_mesh.LoadFromProgram(24, positions, normals, colors, 24, indices);
+
+	Entity cube = ee.CreateEntity();
+	ee.Attach<Drawable>(cube);
+	Drawable& cube_drawable = ee.Fragment<Drawable>(cube);
+	cube_drawable.SetMesh(cube_mesh);
+	// }
 
 	float delta_time = 0.0f;
 
@@ -103,6 +200,7 @@ void Application::Main()
 		// TODO: Keyboard::IsCharacter();
 
 		m_EntityEngine->OnFrame(delta_time);
+		m_Renderer->OnFrame(ee, delta_time);
 
 		// Sleep(10);
 
@@ -117,8 +215,6 @@ void Application::Main()
 		m_Window->Refresh();
 
 	}
-
-	delete shader_d;
 
 }
 

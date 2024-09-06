@@ -7,6 +7,7 @@ class Material;
 class Drawable : public EntityFragment<Drawable>
 {
 	public:
+	Drawable();
 	void SetMesh(Mesh& mesh);
 	Mesh& GetMesh();
 	void SetMaterial(Material& material);
