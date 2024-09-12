@@ -65,7 +65,7 @@ void Renderer::SetShader(Shader& shader)
 {
 	m_Shader = &shader;
 	m_Shader->Bind(m_Pipeline);
-	LOG_SILLY("Shader" << m_Shader << "set");
+	LOG_SILLY("Shader " << m_Shader << " set");
 
 }
 

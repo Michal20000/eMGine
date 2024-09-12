@@ -9,6 +9,7 @@
 				"${workspaceFolder}/Renderer",
 				"${workspaceFolder}/EntityEngine",
 				"${workspaceFolder}/Utilities",
+				"${workspaceFolder}/Utilities/Math",
 				"${workspaceFolder}/Dependencies/GL3W/include",
 				"${workspaceFolder}/Dependencies/GLFW/include"
             ],
