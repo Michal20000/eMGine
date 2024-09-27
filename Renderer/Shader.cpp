@@ -14,7 +14,11 @@ Shader::Shader(const char* vert_filepath, const char* frag_filepath) :
 {
 	CompileVertexShader();
 	CompileFragmentShader();
-	//GL(m_MVPMatrixLocation = glGetUniformLocation(m_VertexShader, "mvpMatrix"));
+	GL(m_MVPMatrixLocation = glGetUniformLocation(m_VertexShader, "mvpMatrix"));
+	if (m_MVPMatrixLocation == -1)
+		LOG_ERROR("MVP matrix location not found in shader");
+	else
+		LOG_SILLY("MVP matrix location is " << m_MVPMatrixLocation);
 }
 
 Shader::~Shader()
@@ -35,14 +39,14 @@ bool operator==(const Shader& lob, const Shader& rob)
 void Shader::CompileVertexShader()
 {
 	std::string source = LoadShaderSource(m_VertexShaderPath);
-	m_VertexShader = CompileShader(source.c_str(), GL_VERTEX_SHADER, "VS log: ");
+	m_VertexShader = CompileShader(source.c_str(), GL_VERTEX_SHADER, "Vertex shader log: ");
 
 }
 
 void Shader::CompileFragmentShader()
 {
 	std::string source = LoadShaderSource(m_FragmentShaderPath);
-	m_FragmentShader = CompileShader(source.c_str(), GL_FRAGMENT_SHADER, "FS log: ");
+	m_FragmentShader = CompileShader(source.c_str(), GL_FRAGMENT_SHADER, "Fragment shader log: ");
 
 }
 
@@ -77,13 +81,38 @@ void Shader::Bind(uint32_t pipeline)
 	GL(glUseProgramStages(pipeline, GL_VERTEX_SHADER_BIT, m_VertexShader));
 	GL(glUseProgramStages(pipeline, GL_FRAGMENT_SHADER_BIT, m_FragmentShader));
 
+	int32_t link_status;
+	int32_t info_log_length;
+
+	GL(glGetProgramiv(m_VertexShader, GL_LINK_STATUS, &link_status));
+	if (link_status == GL_FALSE)
+	{
+		GL(glGetProgramiv(m_VertexShader, GL_INFO_LOG_LENGTH, &info_log_length));
+		char info_log[info_log_length];
+		GL(glGetProgramInfoLog(m_VertexShader, info_log_length, NULL, info_log));
+		LOG_ERROR("Vertex shader program Link error: " << info_log);
+		
+	}
+	else
+		LOG_SILLY("Vertex shader program linked correctly");
+
+	GL(glGetProgramiv(m_FragmentShader, GL_LINK_STATUS, &link_status));
+	if (link_status == GL_FALSE)
+	{	
+		GL(glGetProgramiv(m_FragmentShader, GL_INFO_LOG_LENGTH, &info_log_length));
+		char info_log[info_log_length];
+		GL(glGetProgramInfoLog(m_FragmentShader, info_log_length, NULL, info_log));
+		LOG_ERROR("Fragment shader program Link error: " << info_log);
+
+	}
+	else
+		LOG_SILLY("Fragment shader program linked correctly");
+
 }
 
 void Shader::UploadMVP(glm::mat4& mvp_matrix)
 {
 	GL(glProgramUniformMatrix4fv(m_VertexShader, m_MVPMatrixLocation, 1, GL_FALSE, glm::value_ptr(mvp_matrix)));
-	LOG_SILLY("MVP matrix uploaded");
-
 }
 
 /*

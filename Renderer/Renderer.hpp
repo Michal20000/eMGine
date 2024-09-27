@@ -1,4 +1,5 @@
 #pragma once
+#include <glmtypes.hpp>
 #include "RendererUtilities.hpp"
 
 class EntityEngine;
@@ -30,7 +31,7 @@ class Renderer
 	//Camera m_ActiveCamera;
 	void CreatePipeline();
 	void DestroyPipeline();
-	void DrawObject(Drawable& drawable);
+	void DrawObject(Drawable& drawable, glm::mat4& view_matrix, glm::mat4& proj_matrix);
 
 };
 

@@ -49,21 +49,21 @@ uint32_t VertexArray::IndexBuffer()
 
 void VertexArray::FillVertexBuffers(size_t vertex_count, glm::vec3 positions[], glm::vec3 normals[], glm::vec3 colors[])
 {
-	constexpr uint32_t attrib_position = 0;
+	constexpr uint32_t attrib_position = 0u;
 	GL(glNamedBufferStorage(m_PositionBuffer, vertex_count*sizeof(glm::vec3), positions, 0));
 	GL(glEnableVertexArrayAttrib(m_id, attrib_position));
 	GL(glVertexArrayAttribFormat(m_id, attrib_position, 3, GL_FLOAT, GL_FALSE, 0));
 	GL(glVertexArrayVertexBuffer(m_id, attrib_position, m_PositionBuffer, 0, sizeof(glm::vec3)));
 	GL(glVertexArrayAttribBinding(m_id, attrib_position, attrib_position));
 
-	constexpr uint32_t attrib_normal = 1;
+	constexpr uint32_t attrib_normal = 1u;
 	GL(glNamedBufferStorage(m_NormalBuffer, vertex_count*sizeof(glm::vec3), normals, 0));
 	GL(glEnableVertexArrayAttrib(m_id, attrib_normal));
 	GL(glVertexArrayAttribFormat(m_id, attrib_normal, 3, GL_FLOAT, GL_TRUE, 0));
 	GL(glVertexArrayVertexBuffer(m_id, attrib_normal, m_NormalBuffer, 0, sizeof(glm::vec3)));
 	GL(glVertexArrayAttribBinding(m_id, attrib_normal, attrib_normal));
 
-	constexpr uint32_t attrib_color = 2;
+	constexpr uint32_t attrib_color = 2u;
 	GL(glNamedBufferStorage(m_ColorBuffer, vertex_count*sizeof(glm::vec3), colors, 0));
 	GL(glEnableVertexArrayAttrib(m_id, attrib_color));
 	GL(glVertexArrayAttribFormat(m_id, attrib_color, 3, GL_FLOAT, GL_FALSE, 0));
