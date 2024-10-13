@@ -6,6 +6,7 @@ class EntityEngine;
 class Window;
 class Shader;
 class Drawable;
+class Transform;
 
 class Renderer
 {
@@ -31,7 +32,7 @@ class Renderer
 	//Camera m_ActiveCamera;
 	void CreatePipeline();
 	void DestroyPipeline();
-	void DrawObject(Drawable& drawable, glm::mat4& view_matrix, glm::mat4& proj_matrix);
+	void DrawObject(Drawable& drawable, glm::mat4& model_matrix, glm::mat4& view_matrix, glm::mat4& proj_matrix);
 
 };
 

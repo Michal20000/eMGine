@@ -3,6 +3,8 @@
 #include "Renderer.hpp"
 #include "EntityEngine.hpp"
 #include "Time.hpp"
+#include "Transform.hpp"
+
 
 Application::Application()
 {
@@ -14,6 +16,7 @@ Application::Application()
 	// TODO: EntityEngine::Register<...>();
 	EntityEngine::Register<Renderer>();
 	EntityEngine::Register<Drawable>();
+	EntityEngine::Register<Transform>();
 
 }
 
@@ -33,15 +36,16 @@ Application::~Application()
 #include "Keyboard.hpp"
 #include "Mouse.hpp"
 
-#include "Renderer/Mesh.hpp"
-#include "Renderer/Shader.hpp"
-#include "Renderer/BasicShapes.hpp"
+#include "Mesh.hpp"
+#include "Shader.hpp"
+#include "BasicShapes.hpp"
 // 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 // COLUMN  COLUMN  COLUMN    COLUMN
 
 void Application::Main()
 {
 	EntityEngine& ee = this->GetEntityEngine();
+	
 
 	// glm::mat4 test_matrix = {
 	// 	{ 0.0, 1.0, 2.0, 3.0 },
@@ -62,30 +66,30 @@ void Application::Main()
 	//DELETE LATER {
 	glm::vec3 positions[]
 	{
-		{-0.5f, -0.5f, -0.5f},
-		{0.5f, -0.5f, -0.5f},
-		{0.5f, 0.5f, -0.5f},
-		{-0.5f, 0.5f, -0.5f},
-		{0.5f, -0.5f, 0.5f},
-		{-0.5f, -0.5f, 0.5f},
-		{-0.5f, 0.5f, 0.5f},
-		{0.5f, 0.5f, 0.5f},
 		{-0.5f, -0.5f, 0.5f},
 		{0.5f, -0.5f, 0.5f},
-		{0.5f, -0.5f, -0.5f},
-		{-0.5f, -0.5f, -0.5f},
-		{-0.5f, 0.5f, -0.5f},
-		{0.5f, 0.5f, -0.5f},
 		{0.5f, 0.5f, 0.5f},
 		{-0.5f, 0.5f, 0.5f},
-		{-0.5f, -0.5f, 0.5f},
+		{0.5f, -0.5f, -0.5f},
 		{-0.5f, -0.5f, -0.5f},
 		{-0.5f, 0.5f, -0.5f},
-		{-0.5f, 0.5f, 0.5f},
-		{0.5f, -0.5f, -0.5f},
-		{0.5f, -0.5f, 0.5f}, 
-		{0.5f, 0.5f, 0.5f}, 
 		{0.5f, 0.5f, -0.5f},
+		{-0.5f, 0.5f, 0.5f},
+		{0.5f, 0.5f, 0.5f},
+		{0.5f, 0.5f, -0.5f},
+		{-0.5f, 0.5f, -0.5f},
+		{-0.5f, -0.5f, -0.5f},
+		{0.5f, -0.5f, -0.5f},
+		{0.5f, -0.5f, 0.5f},
+		{-0.5f, -0.5f, 0.5f},
+		{0.5f, -0.5f, 0.5f},
+		{0.5f, -0.5f, -0.5f},
+		{0.5f, 0.5f, -0.5f},
+		{0.5f, 0.5f, 0.5f},
+		{-0.5f, -0.5f, -0.5f},
+		{-0.5f, -0.5f, 0.5f}, 
+		{-0.5f, 0.5f, 0.5f}, 
+		{-0.5f, 0.5f, -0.5f},
 	};
 
 	glm::vec3 normals[]
@@ -118,24 +122,30 @@ void Application::Main()
 
 	glm::vec3 colors[]
 	{
-		{1.0f, 0.5f, 0.0f},
-		{0.0f, 1.0f, 0.5f},
-		{0.5f, 0.0f, 1.0f},
-		{1.0f, 0.0f, 0.5f},
+		{1.0f, 0.0f, 0.0f},
 		{0.5f, 1.0f, 0.0f},
-		{0.0f, 0.5f, 1.0f},
-		{1.0f, 0.5f, 0.0f},
-		{0.0f, 1.0f, 0.5f},
+		{0.0f, 1.0f, 1.0f},
 		{0.5f, 0.0f, 1.0f},
-		{1.0f, 0.0f, 0.5f},
+		{1.0f, 0.0f, 0.0f},
 		{0.5f, 1.0f, 0.0f},
-		{0.0f, 0.5f, 1.0f},
-		{1.0f, 0.5f, 0.0f},
-		{0.0f, 1.0f, 0.5f},
+		{0.0f, 1.0f, 1.0f},
 		{0.5f, 0.0f, 1.0f},
-		{1.0f, 0.0f, 0.5f},
+		{1.0f, 0.0f, 0.0f},
 		{0.5f, 1.0f, 0.0f},
-		{0.0f, 0.5f, 1.0f},
+		{0.0f, 1.0f, 1.0f},
+		{0.5f, 0.0f, 1.0f},
+		{1.0f, 0.0f, 0.0f},
+		{0.5f, 1.0f, 0.0f},
+		{0.0f, 1.0f, 1.0f},
+		{0.5f, 0.0f, 1.0f},
+		{1.0f, 0.0f, 0.0f},
+		{0.5f, 1.0f, 0.0f},
+		{0.0f, 1.0f, 1.0f},
+		{0.5f, 0.0f, 1.0f},
+		{1.0f, 0.0f, 0.0f},
+		{0.5f, 1.0f, 0.0f},
+		{0.0f, 1.0f, 1.0f},
+		{0.5f, 0.0f, 1.0f},
 	};
 
 	uint32_t indices[]
@@ -151,9 +161,12 @@ void Application::Main()
 	Mesh cube_mesh;
 	cube_mesh.LoadFromProgram(24, positions, normals, colors, 36, indices);
 
-	Entity cube = ee.CreateEntity();
+	Entity cube = ee.CreateEntity<>();
+	ee.Attach<Transform>(cube);
 	ee.Attach<Drawable>(cube);
+	Transform& cube_transform = ee.Fragment<Transform>(cube);
 	Drawable& cube_drawable = ee.Fragment<Drawable>(cube);
+	cube_transform.Translate(glm::vec3(0.1f, 0.2f, 0.0f));
 	cube_drawable.SetMesh(cube_mesh);
 	// }
 
@@ -166,6 +179,8 @@ void Application::Main()
 		// ...for IO calculations
 
 		m_Window->PollEvents();
+
+		cube_transform.Rotate(glm::vec3(60.0f * delta_time, 15.0f * delta_time, 0.0f));
 
 		// TODO: m_Window.OnFrame();
 		// TODO: m_EntityEngine.OnPeriodic();
@@ -200,7 +215,6 @@ void Application::Main()
 		// TODO: Keyboard::IsCharacter();
 
 		m_EntityEngine->OnFrame(delta_time);
-		m_Renderer->OnFrame(ee, delta_time);
 
 		// Sleep(10);
 

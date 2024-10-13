@@ -7,6 +7,7 @@
 #include "Application.hpp"
 #include "Window.hpp"
 #include "Shader.hpp"
+#include "Transform.hpp"
 #include "Mesh.hpp"
 #include "Drawable.hpp"
 
@@ -31,6 +32,7 @@ Renderer::Renderer(Application& application) :
 	GL(glEnable(GL_DEPTH_TEST));
 	GL(glDepthFunc(GL_LESS));
 	GL(glEnable(GL_CULL_FACE));
+	GL(glCullFace(GL_BACK));
 	GL(glFrontFace(GL_CCW));
 	//GL(glEnable(GL_BLEND));
 	//GL(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
@@ -79,8 +81,8 @@ void Renderer::OnFrame(EntityEngine& ee, float delta_time)
 
 	float screen_ratio = static_cast<float>(window.Width())/static_cast<float>(window.Height());
 	glm::vec3 camera_position = glm::vec3(0.0f, 0.0f, 5.0f);
-	glm::vec3 camera_target = glm::vec3(-0.5f, -0.5f, 0.0f);
-	glm::vec3 camera_up = glm::normalize(glm::vec3(0.0f, 0.0f, 1.0f)); //Z-up
+	glm::vec3 camera_target = glm::vec3(0.01f, 0.02f, 0.0f);
+	glm::vec3 camera_up = glm::vec3(0.0f, 0.0f, 1.0f); //Z-up
 
 	glm::mat4 view_matrix = glm::lookAt(camera_position, camera_target, camera_up);
 
@@ -89,8 +91,11 @@ void Renderer::OnFrame(EntityEngine& ee, float delta_time)
 	for (EntityView view = ee.View<Drawable>(); view.Verify(); ++view)
 	{
 		Entity entity = view.Record();
-		Drawable drawable = view.Fragment<Drawable>();
-		renderer.DrawObject(drawable, view_matrix, proj_matrix);
+		Drawable& drawable = view.Fragment<Drawable>();
+		Transform& transform = view.Fragment<Transform>();
+		glm::mat4 model_matrix = transform.Matrix();
+		renderer.DrawObject(drawable, model_matrix, view_matrix, proj_matrix);
+		
 	}
 
 }
@@ -107,23 +112,17 @@ void Renderer::DestroyPipeline()
 
 }
 
-void Renderer::DrawObject(Drawable& drawable, glm::mat4& view_matrix, glm::mat4& proj_matrix)
+void Renderer::DrawObject(Drawable& drawable, glm::mat4& model_matrix, glm::mat4& view_matrix, glm::mat4& proj_matrix)
 {
-	//TODO CHANGE!!!
-	glm::mat4 model_matrix = glm::mat4(1.0f);
-	model_matrix = glm::translate(model_matrix, glm::vec3(-1.0f, -1.0f, 0.0f));
-	model_matrix = glm::rotate(model_matrix, glm::radians(15.0f), glm::vec3(0.0f, 0.0f, 1.0f));
-	model_matrix = glm::rotate(model_matrix, glm::radians(25.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-	
-	glm::mat4 mvp_matrix = proj_matrix*view_matrix*model_matrix;
+	glm::mat4 mvp_matrix = proj_matrix * view_matrix * model_matrix;
 	m_Shader->UploadMVP(mvp_matrix);
-
 	GL(glBindProgramPipeline(m_Pipeline));
 	Mesh& mesh = drawable.GetMesh();
 	VertexArray& vertex_array = mesh.GetVertexArray();
 	GL(glBindVertexArray(vertex_array.ID()));
 	//glBindTextureUnit(unit, texture);
 	GL(glDrawElements(GL_TRIANGLES, mesh.IndexCount, GL_UNSIGNED_INT, nullptr));
+
 }
 
 /*

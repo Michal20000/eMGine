@@ -1,5 +1,7 @@
 #include "Drawable.hpp"
 
+#include "Mesh.hpp"
+
 Drawable::Drawable() :
 	m_Mesh(nullptr),
 	m_Material(nullptr)

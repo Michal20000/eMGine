@@ -11,3 +11,4 @@
 #include "mat4x2.hpp"
 #include "mat4x3.hpp"
 #include "mat4x4.hpp"
+#include "gtc/quaternion.hpp"
