@@ -53,6 +53,8 @@ file(GLOB UTILITIES_CPP_FILES "./Utilities/*.cpp")
 file(GLOB MATH_CPP_FILES "./Utilities/Math/*.cpp")
 set(ALL_CPP_FILES ${CPP_FILES} ${CONTAINERS_CPP_FILES} ${EE_CPP_FILES} ${RENDERER_CPP_FILES} ${UTILITIES_CPP_FILES} ${MATH_CPP_FILES} "./Dependencies/GL3W/gl3w.cpp")
 
+set(RESOURCE_DIR "${CMAKE_SOURCE_DIR}/Resources")
+
 
 
 add_executable(application_debug ${ALL_CPP_FILES})
@@ -75,6 +77,16 @@ target_link_libraries(application_debug PRIVATE "glfw3")
 target_link_directories(application_debug PRIVATE "./Dependencies/assimp")
 target_link_libraries(application_debug PRIVATE "assimp")
 
+get_target_property(DEBUG_BINARY_DIR application_debug RUNTIME_OUTPUT_DIRECTORY)
+add_custom_command(
+	TARGET application_debug
+	POST_BUILD
+	COMMAND ${CMAKE_COMMAND} -E echo "Copying Resource folder to debug build directory..."
+	COMMAND ${CMAKE_COMMAND} -E copy_directory "${RESOURCE_DIR}" "${DEBUG_BINARY_DIR}/Resources"
+	COMMAND ${CMAKE_COMMAND} -E echo "Resource folder copied to debug directory."
+	COMMENT "Copying Resource folder to debug build directory..."
+)
+
 
 
 add_executable(application_release ${ALL_CPP_FILES})
@@ -95,3 +107,13 @@ target_link_directories(application_release PRIVATE "./Dependencies/GLFW")
 target_link_libraries(application_release PRIVATE "glfw3")
 target_link_directories(application_release PRIVATE "./Dependencies/assimp")
 target_link_libraries(application_release PRIVATE "assimp")
+
+get_target_property(RELEASE_BINARY_DIR application_release RUNTIME_OUTPUT_DIRECTORY)
+add_custom_command(
+	TARGET application_release
+	POST_BUILD
+	COMMAND ${CMAKE_COMMAND} -E echo "Copying Resource folder to release build directory..."
+	COMMAND ${CMAKE_COMMAND} -E copy_directory "${RESOURCE_DIR}" "${RELEASE_BINARY_DIR}/Resources"
+	COMMAND ${CMAKE_COMMAND} -E echo "Resource folder copied to release directory."
+	COMMENT "Copying Resource folder to release build directory"
+)
