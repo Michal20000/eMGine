@@ -91,11 +91,7 @@ void Renderer::OnFrame(EntityEngine& ee, float delta_time)
 	}
 	glm::vec3 camera_position = camera_transform.Position();
 	glm::vec3 camera_rotation = camera_transform.RotationRadians();
-	glm::vec3 camera_target = camera_position + glm::vec3(
-		glm::cos(camera_rotation.x),
-		glm::cos(camera_rotation.y),
-		glm::cos(camera_rotation.z)
-	);
+	glm::vec3 camera_target = camera_position + glm::vec3(0.0f, 1.0f, 0.0f) * camera_transform.RotationQ();
 	glm::vec3 camera_up = glm::vec3(0.0f, 0.0f, 1.0f); //Z-up
 
 	glm::mat4 view_matrix = glm::lookAt(camera_position, camera_target, camera_up);

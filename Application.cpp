@@ -175,10 +175,10 @@ void Application::Main()
 	cube_mesh.LoadFromProgram(24, positions, normals, colors, 36, indices);
 
 	Entity cube = ee.CreateEntity<>();
-	ee.Attach<Transform>(cube);
 	ee.Attach<Drawable>(cube);
-	Transform& cube_transform = ee.Fragment<Transform>(cube);
+	ee.Attach<Transform>(cube);
 	Drawable& cube_drawable = ee.Fragment<Drawable>(cube);
+	Transform& cube_transform = ee.Fragment<Transform>(cube);
 	cube_transform.Position(glm::vec3(0.0f, 0.0f, 0.0f));
 	cube_drawable.SetMesh(cube_mesh);
 
@@ -196,9 +196,9 @@ void Application::Main()
 
 		camera_transform.Rotate(glm::vec3(0.0f, 0.0f, 30.0f * delta_time));
 		camera_transform.Position(glm::vec3(
-			5.0f * glm::sin(camera_transform.RotationRadians().z),
+			-5.0f * glm::sin(camera_transform.RotationRadians().z),
 			-5.0f * glm::cos(camera_transform.RotationRadians().z),
-			0.0f
+			0.5f
 		));
 
 		// TODO: m_Window.OnFrame();
