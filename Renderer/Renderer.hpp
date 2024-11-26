@@ -32,7 +32,13 @@ class Renderer
 	//Camera m_ActiveCamera;
 	void CreatePipeline();
 	void DestroyPipeline();
-	void DrawObject(Drawable& drawable, glm::mat4& model_matrix, glm::mat4& view_matrix, glm::mat4& proj_matrix);
+	void DrawObject(
+		Drawable& drawable,
+		glm::mat4& model_matrix,
+		glm::mat4& view_matrix,
+		glm::mat4& proj_matrix,
+		glm::vec3& camera_position
+	);
 
 };
 

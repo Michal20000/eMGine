@@ -3,6 +3,7 @@
 #include "Renderer.hpp"
 #include "EntityEngine.hpp"
 #include "Time.hpp"
+#include "Camera.hpp"
 #include "Transform.hpp"
 
 
@@ -17,6 +18,7 @@ Application::Application()
 	EntityEngine::Register<Renderer>();
 	EntityEngine::Register<Drawable>();
 	EntityEngine::Register<Transform>();
+	EntityEngine::Register<Camera>();
 
 }
 
@@ -158,6 +160,17 @@ void Application::Main()
 		20, 21, 22, 	22, 23, 20,
 	};
 
+	Entity camera = ee.CreateEntity<>();
+	ee.Attach<Camera>(camera);
+	ee.Attach<Transform>(camera);
+	Transform& camera_transform = ee.Fragment<Transform>(camera);
+	// camera_transform.Position(glm::vec3(0.1f, 0.2f, 5.0f));
+	// camera_transform.RotateRadians(glm::vec3(
+	// 	glm::acos(-0.1f/glm::length(camera_transform.Position())),
+	// 	glm::acos(-0.2f/glm::length(camera_transform.Position())),
+	// 	glm::acos(-5.0f/glm::length(camera_transform.Position()))
+	// ));
+
 	Mesh cube_mesh;
 	cube_mesh.LoadFromProgram(24, positions, normals, colors, 36, indices);
 
@@ -166,8 +179,9 @@ void Application::Main()
 	ee.Attach<Drawable>(cube);
 	Transform& cube_transform = ee.Fragment<Transform>(cube);
 	Drawable& cube_drawable = ee.Fragment<Drawable>(cube);
-	cube_transform.Translate(glm::vec3(0.1f, 0.2f, 0.0f));
+	cube_transform.Position(glm::vec3(0.0f, 0.0f, 0.0f));
 	cube_drawable.SetMesh(cube_mesh);
+
 	// }
 
 	float delta_time = 0.0f;
@@ -180,7 +194,12 @@ void Application::Main()
 
 		m_Window->PollEvents();
 
-		cube_transform.Rotate(glm::vec3(60.0f * delta_time, 15.0f * delta_time, 0.0f));
+		camera_transform.Rotate(glm::vec3(0.0f, 0.0f, 30.0f * delta_time));
+		camera_transform.Position(glm::vec3(
+			5.0f * glm::sin(camera_transform.RotationRadians().z),
+			-5.0f * glm::cos(camera_transform.RotationRadians().z),
+			0.0f
+		));
 
 		// TODO: m_Window.OnFrame();
 		// TODO: m_EntityEngine.OnPeriodic();

@@ -7,6 +7,7 @@
 #include "Application.hpp"
 #include "Window.hpp"
 #include "Shader.hpp"
+#include "Camera.hpp"
 #include "Transform.hpp"
 #include "Mesh.hpp"
 #include "Drawable.hpp"
@@ -80,13 +81,26 @@ void Renderer::OnFrame(EntityEngine& ee, float delta_time)
 	GL(glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT));
 
 	float screen_ratio = static_cast<float>(window.Width())/static_cast<float>(window.Height());
-	glm::vec3 camera_position = glm::vec3(0.0f, 0.0f, 5.0f);
-	glm::vec3 camera_target = glm::vec3(0.01f, 0.02f, 0.0f);
+	
+	Transform camera_transform;
+	for (EntityView view = ee.View<Camera>(); view.Verify(); ++view)
+	{
+		Entity entity = view.Record();
+		camera_transform = view.Fragment<Transform>();
+
+	}
+	glm::vec3 camera_position = camera_transform.Position();
+	glm::vec3 camera_rotation = camera_transform.RotationRadians();
+	glm::vec3 camera_target = camera_position + glm::vec3(
+		glm::cos(camera_rotation.x),
+		glm::cos(camera_rotation.y),
+		glm::cos(camera_rotation.z)
+	);
 	glm::vec3 camera_up = glm::vec3(0.0f, 0.0f, 1.0f); //Z-up
 
 	glm::mat4 view_matrix = glm::lookAt(camera_position, camera_target, camera_up);
 
-	glm::mat4 proj_matrix = glm::perspective(glm::radians(60.0f), screen_ratio, 0.1f, 1000.0f);
+	glm::mat4 proj_matrix = glm::perspective(glm::radians(70.0f), screen_ratio, 0.1f, 1000.0f);
 
 	for (EntityView view = ee.View<Drawable>(); view.Verify(); ++view)
 	{
@@ -94,7 +108,7 @@ void Renderer::OnFrame(EntityEngine& ee, float delta_time)
 		Drawable& drawable = view.Fragment<Drawable>();
 		Transform& transform = view.Fragment<Transform>();
 		glm::mat4 model_matrix = transform.Matrix();
-		renderer.DrawObject(drawable, model_matrix, view_matrix, proj_matrix);
+		renderer.DrawObject(drawable, model_matrix, view_matrix, proj_matrix, camera_position);
 		
 	}
 
@@ -112,10 +126,16 @@ void Renderer::DestroyPipeline()
 
 }
 
-void Renderer::DrawObject(Drawable& drawable, glm::mat4& model_matrix, glm::mat4& view_matrix, glm::mat4& proj_matrix)
+void Renderer::DrawObject(
+	Drawable& drawable,
+	glm::mat4& model_matrix,
+	glm::mat4& view_matrix,
+	glm::mat4& proj_matrix,
+	glm::vec3& camera_position)
 {
 	glm::mat4 mvp_matrix = proj_matrix * view_matrix * model_matrix;
-	m_Shader->UploadMVP(mvp_matrix);
+	glm::mat3 normal_matrix = glm::transpose(glm::inverse(glm::mat3(model_matrix)));
+	m_Shader->UploadUniforms(mvp_matrix, model_matrix, normal_matrix, camera_position);
 	GL(glBindProgramPipeline(m_Pipeline));
 	Mesh& mesh = drawable.GetMesh();
 	VertexArray& vertex_array = mesh.GetVertexArray();

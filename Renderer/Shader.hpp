@@ -25,11 +25,19 @@ class Shader
 	const char* m_FragmentShaderPath;
 	uint32_t m_VertexShader;
 	uint32_t m_FragmentShader;
+	int32_t m_CameraPositionLocation;
 	int32_t m_MVPMatrixLocation;
+	int32_t m_ModelMatrixLocation;
+	int32_t m_NormalMatrixLocation;
 	std::string LoadShaderSource(const char* filepath);
 	uint32_t CompileShader(const char* source, GLenum stage, const char* message);
 	void Bind(uint32_t pipeline);
-	void UploadMVP(glm::mat4& mvp_matrix);
+	void UploadUniforms(
+		glm::mat4& mvp_matrix,
+		glm::mat4& model_matrix,
+		glm::mat3& normal_matrix,
+		glm::vec3& camera_position
+	);
 
 };
 

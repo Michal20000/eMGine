@@ -14,11 +14,31 @@ Shader::Shader(const char* vert_filepath, const char* frag_filepath) :
 {
 	CompileVertexShader();
 	CompileFragmentShader();
+
 	GL(m_MVPMatrixLocation = glGetUniformLocation(m_VertexShader, "mvpMatrix"));
 	if (m_MVPMatrixLocation == -1)
 		LOG_ERROR("MVP matrix location not found in shader");
 	else
 		LOG_SILLY("MVP matrix location is " << m_MVPMatrixLocation);
+
+	GL(m_ModelMatrixLocation = glGetUniformLocation(m_VertexShader, "modelMatrix"));
+	if (m_ModelMatrixLocation == -1)
+		LOG_ERROR("Model matrix location not found in shader");
+	else
+		LOG_SILLY("Model matrix location is " << m_ModelMatrixLocation);
+
+	GL(m_NormalMatrixLocation = glGetUniformLocation(m_VertexShader, "normalMatrix"));
+	if (m_NormalMatrixLocation == -1)
+		LOG_ERROR("Normal matrix location not found in shader");
+	else
+		LOG_SILLY("Normal matrix location is " << m_NormalMatrixLocation);
+
+	GL(m_CameraPositionLocation = glGetUniformLocation(m_FragmentShader, "cameraPosition"));
+	if (m_CameraPositionLocation == -1)
+		LOG_ERROR("MVP matrix location not found in shader");
+	else
+		LOG_SILLY("MVP matrix location is " << m_CameraPositionLocation);
+
 }
 
 Shader::~Shader()
@@ -110,9 +130,17 @@ void Shader::Bind(uint32_t pipeline)
 
 }
 
-void Shader::UploadMVP(glm::mat4& mvp_matrix)
+void Shader::UploadUniforms(
+	glm::mat4& mvp_matrix,
+	glm::mat4& model_matrix,
+	glm::mat3& normal_matrix,
+	glm::vec3& camera_position)
 {
 	GL(glProgramUniformMatrix4fv(m_VertexShader, m_MVPMatrixLocation, 1, GL_FALSE, glm::value_ptr(mvp_matrix)));
+	GL(glProgramUniformMatrix4fv(m_VertexShader, m_ModelMatrixLocation, 1, GL_FALSE, glm::value_ptr(model_matrix)));
+	GL(glProgramUniformMatrix3fv(m_VertexShader, m_NormalMatrixLocation, 1, GL_FALSE, glm::value_ptr(normal_matrix)));
+	GL(glProgramUniform3fv(m_FragmentShader, m_CameraPositionLocation, 1, glm::value_ptr(camera_position)));
+
 }
 
 /*

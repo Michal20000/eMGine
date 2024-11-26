@@ -105,10 +105,10 @@ add_custom_target(copy_resources_dir ALL
 	COMMAND ${CMAKE_COMMAND} -E echo "Copying Resource folder to debug build directory..."
 	COMMAND ${CMAKE_COMMAND} -E copy_directory "${RESOURCE_DIR}" "${DEBUG_BINARY_DIR}/Resources"
 	COMMAND ${CMAKE_COMMAND} -E echo "Resource folder copied to debug directory."
-	COMMENT "Copying Resource folder to debug build directory..."
+	COMMENT "Copying Resource folder to debug build directory"
 
 	COMMAND ${CMAKE_COMMAND} -E echo "Copying Resource folder to release build directory..."
 	COMMAND ${CMAKE_COMMAND} -E copy_directory "${RESOURCE_DIR}" "${RELEASE_BINARY_DIR}/Resources"
 	COMMAND ${CMAKE_COMMAND} -E echo "Resource folder copied to release directory."
-	COMMENT "Copying Resource folder to release build directory..."
+	COMMENT "Copying Resource folder to release build directory"
 )
